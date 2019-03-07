@@ -116,7 +116,7 @@
 
 <script type="text/javascript">
 	
-	Mercadopago.setPublishableKey(@php env("MERCADOPAGOPULIC") @endphp);
+	Mercadopago.setPublishableKey("{{ env("MERCADOPAGOPULIC") }}");
 
 	Mercadopago.getIdentificationTypes();
 
