@@ -45,13 +45,21 @@ Route::get('/cursos/show/{id}', 'PageController@showEvents')->name('events.show.
 
 Route::get('/cursos/inscripcion/{id}', 'PageController@EventsInscription')->name('events.inscription.front');
 
-Route::get('/cursos/payments', function(){
-	return view('shoping.payment-form');
-})->name('events.payments');
+
+Route::resource('inscripcion','InscriptionController')->names([
+	'store'=>'store.inscription',
+])->only('store');
+
+
+
+Route::get('/cursos/payments','PaymentController@show')->name('events.payments');
 
 Route::post('/cursos/payments', 'PageController@payment')->name('events.payments.set');
 
 Route::get('/user/create', 'PageController@createUserTest');
+
+
+Route::get('/test', 'PageController@paymentMEthods');
 
 
 Route::get('/contacto', function(){

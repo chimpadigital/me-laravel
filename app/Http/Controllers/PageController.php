@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Event;
 use MercadoPago\SDK;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\EmailAdminInscription;
+use App\Mail\EmailUserInscription;
+
 
 class PageController extends Controller
 {
@@ -57,27 +61,70 @@ class PageController extends Controller
     }
 
     public function payment(Request $request)
-    {
-    	dd($request-all());
-    	
-    	SDK::setAccessToken("TEST-7677681462240655-030619-56ef71506ec4840faa5b98a6040dfd57-413786444");
-	    //...
-	    $payment = new \MercadoPago\Payment();
-	    $payment->transaction_amount = 181;
-	    $payment->token = $request->input('token');
-	    $payment->description = "Rustic Bronze Knife";
-	    $payment->installments = 1;
-	    $payment->payment_method_id = "visa";
-	    $payment->payer = array(
-	    "email" => $request->input('email'),
-	    );
-	    // Save and posting the payment
-	    $payment->save();
-	    //...
-	    // Print the payment status
+    { 	
 
-	    echo $payment->status;
-    	//...
+    	$request->validate([
+    		'paymentMethodId'=>'required',
+    		'token'=>'required',
+    		'email'=>'required',
+
+    	]);
+    	if ($session = session('inscription')) {
+    		
+    		$event = Event::where('id',$session['event'])->first();
+
+    		SDK::setAccessToken(env('MERCADOPAGOAPI'));
+		    //...
+		    $payment = new \MercadoPago\Payment();
+		    $payment->transaction_amount = $event->price;
+		    $payment->token = $request->input('token');
+		    $payment->description = $event->name;
+		    $payment->installments = 1;
+		    $payment->payment_method_id = $request->input('paymentMethodId');
+		    $payment->payer = array(
+		    "email" => $request->input('email'),
+		    );
+		    // Save and posting the payment
+		    $payment->save();
+		    //...
+		    // Print the payment status
+
+		    switch ($payment->status) {
+		    	case 'approved':
+		    		Mail::to('admin@admin.com')->send(new EmailAdminInscription($event,$session,$payment));
+
+		    		Mail::to($session['email'])->send(new EmailUserInscription($event,$session,$payment));
+		    		
+		    		return view('shoping.thanks',[
+		    			'event'=>$event,
+		    		]);
+
+		    		break;
+
+		    	case 'in_process':
+
+		    		return view('shoping.process',[
+		    			'event'=>$event,
+		    		]);
+
+		    		break;
+
+		    	case 'rejected':
+
+		    		return redirect()->route('events.inscription.front',$event->id)->with('error','Hubo un problema al procesar tu pago, por favor selecciona otro metodo de pago o reintenta mas tarde');
+
+		    		break;
+
+		    	case null:
+
+		    		return redirect()->route('events.inscription.front',$event->id)->with('error','Hubo un problema al procesar tu pago, por favor selecciona otro metodo de pago o reintenta mas tarde');
+
+		    		break;
+		    }
+    	}
+
+    	return abort(404);
+    	
     }
 
     public function createUserTest()
@@ -95,4 +142,14 @@ class PageController extends Controller
 
 		  var_dump($result);
     }
+
+    public function paymentMEthods()
+    {
+    	SDK::setAccessToken(env('MERCADOPAGOAPI'));
+
+    	$method_payments = MercadoPago::get("/v1/payment_methods");
+
+    	dd($method_payments);
+    }
+
 }

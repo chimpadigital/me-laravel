@@ -59,7 +59,7 @@ class EventsController extends Controller
             abort(404);
         };
 
-        Events::create([
+        Event::create([
             'name'=>$request->input('title'),
             'description'=>$request->input('description'),
             'date_start'=>$request->input('date_start'),

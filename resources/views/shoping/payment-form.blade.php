@@ -72,10 +72,33 @@
 					   	</div>
 					            
 	
-					        <input type="hidden" name="paymentMethodId" />
+					        <input id="paymentMethodId" type="hidden" name="paymentMethodId" />
 					        <input class="btn btn-success" type="submit" value="Pay!" />
 					
 					</form>
+                </div>
+                <div class="col-12 col-md-2"></div>
+                <div class="col-12 col-md-5 wow fadeInDown" data-wow-delay="1s" style="z-index:1000;">
+                    <div class="precio">
+                        <h3 class="">Costo</h3>
+                        <h1 class="mb-4">${{$event->price}}</h1>
+                        
+                        
+                        <ul class="info-evento mt-5 wow fadeInLeft" data-wow-delay=".8s">
+                            <li>
+                                <img src="{{ asset('img/core-img/calendar.svg') }}" alt="" class="float-left mr-4 icono-evento">
+                                <h5>{{ date('d',strtotime($event->date_start)) }} de {{ date('M',strtotime($event->date_start)) }}</h5>
+                            </li>
+                            <li>
+                                <img src="{{ asset('img/core-img/timer.svg') }}" alt="" class="float-left mr-4 icono-evento">
+                                <h5>{{$event->hour}}</h5>
+                            </li>
+                            <li>
+                                <img src="{{ asset('img/core-img/location-point.svg') }}" alt="" class="float-left mr-4 icono-evento">
+                                <h5>{{$event->address}}</h5>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
              
@@ -97,9 +120,26 @@
 
 	Mercadopago.getIdentificationTypes();
 
+	var paymentMethod = document.getElementById('paymentMethodId'); 
+	var form = document.querySelector('#pay');
+
+	function setPaymentMethodInfo(status, response) {
+    if (status == 200) {
+        paymentMethod.setAttribute('name', "paymentMethodId");
+        paymentMethod.setAttribute('type', "hidden");
+        paymentMethod.setAttribute('value', response[0].id);
+
+        form.appendChild(paymentMethod);
+        
+        } 
+        else 
+        {
+            document.querySelector("input[name=paymentMethodId]").value = response[0].id;
+        }
+    };
 
 	function guessingPaymentMethod(event) {
-	    var bin = getBin();
+	    var bin = document.getElementById('cardNumber').value;
 
 	    if (event.type == "keyup") {
 	        if (bin.length >= 6) {
@@ -118,20 +158,7 @@
 	    }
 	};
 
-	function setPaymentMethodInfo(status, response) {
-    if (status == 200) {
-        paymentMethod.setAttribute('name', "paymentMethodId");
-        paymentMethod.setAttribute('type', "hidden");
-        paymentMethod.setAttribute('value', response[0].id);
-
-        form.appendChild(paymentMethod);
-        
-        } 
-        else 
-        {
-            document.querySelector("input[name=paymentMethodId]").value = response[0].id;
-        }
-    };
+	
 
 
 
@@ -149,6 +176,8 @@
 	    }
 	};
 
+	document.querySelector('#pay').addEventListener('keyup', guessingPaymentMethod);
+
 	document.querySelector('#pay').addEventListener('submit', doPay);
 
 
@@ -157,7 +186,7 @@
 	        alert("verify filled data");
 	        alert(status);
 	    }else{
-	        var form = document.querySelector('#pay');
+	        
 	        var card = document.createElement('input');
 	        card.setAttribute('name', 'token');
 	        card.setAttribute('type', 'hidden');

@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\User;
+use App\Country;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,6 +13,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        Country::create([
+            'name'=>'Argentina',
+            'code'=>'ar',
+        ]);
+
+        Country::create([
+            'name'=>'Costa Rica',
+            'code'=>'cr',
+        ]);
         // $this->call(UsersTableSeeder::class);
         User::create([
 	        'name' => 'admin',

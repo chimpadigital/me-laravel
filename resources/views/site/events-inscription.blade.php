@@ -8,7 +8,16 @@
         <div class="container h-100 mt-8">
             <div class="row h-100">
                 <div class="col-12 col-md-5">
-                <form action="#" method="post">
+                @if (session('error'))
+
+                        <div class="alert alert-warning alert-styled-left alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert"><span>×</span></button>
+                            <span class="font-weight-semibold">{{ session('error') }}</span>
+                        </div>
+                @endif
+                <form action="{{ route('store.inscription') }}" method="post">
+                            @csrf
+                            <input name="event" type="hidden" value="{{$event->id}}">
                             <!-- Message Input Area Start -->
                             <div class="contact_input_area">
                                 <div class="row">
@@ -46,6 +55,17 @@
                                             <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="¿Dudas?" required></textarea>
                                         </div>
                                     </div>
+
+                                        <div class="col-12">
+                                        <div class="form-group">
+                                            <select class="form-control" name="method_payment" id="method_payment">
+                                                <option value="mercado_pago"><i class="fa fab-mp"></i>MercadoPago</option>
+                                                <option value="transferencia"><i class="fa fa-bank"></i>Transferencia Bancaria</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
                                     <!-- Single Input Area Start -->
                                     <div class="col-12 text-center">
                                         <button type="submit" class="btn btn-primary">Enviar</button>

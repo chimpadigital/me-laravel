@@ -60,7 +60,7 @@
                                     <img src="{{ asset('img/core-img/logo-menu.svg') }}" alt="">
                                 </a>
                                 <ul class="navbar-nav ml-auto" id="nav" style="align-items: center;">
-                                    <li class="nav-item"><a class="nav-link" href="cursos.php">Próximos cursos</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('events') }}">Próximos cursos</a></li>
                                     <li class="nav-item"><a class="nav-link" href="contacto.php">Contacto</a></li>
                                     <div class="menu-social-icon">
                                         <a href="https://www.facebook.com/MEExperiencias" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
