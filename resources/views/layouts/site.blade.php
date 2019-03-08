@@ -56,7 +56,7 @@
                                     <li class="nav-item"><a class="nav-link" href="blog.php">Blog</a></li>
                                     
                                 </ul>
-                                <a class="navbar-brand d-none d-xl-block" href="bienvenido.php">
+                                <a class="navbar-brand d-none d-xl-block" href="{{ route('welcome') }}">
                                     <img src="{{ asset('img/core-img/logo-menu.svg') }}" alt="">
                                 </a>
                                 <ul class="navbar-nav ml-auto" id="nav" style="align-items: center;">
