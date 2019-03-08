@@ -16,7 +16,7 @@ class PageController extends Controller
     {
     	session()->put('country',$request->input('country'));
 
-    	return back();
+    	return redirect()->route('welcome');
     }
 
     public function events()

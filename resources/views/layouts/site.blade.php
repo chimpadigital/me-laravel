@@ -50,7 +50,7 @@
                             <!-- Menu Area -->
                             <div class="collapse navbar-collapse" id="ca-navbar">
                                 <ul class="navbar-nav mr-auto" id="nav" style="align-items: center;">
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('/') }}"><span class="active-nuevo">Bienvenido</span></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('welcome') }}"><span class="active-nuevo">Bienvenido</span></a></li>
                                     <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">¿Quienes Somos?</a></li>
                                     <li class="nav-item"><a class="nav-link" href="{{ route('service') }}">¿Qué hacemos?</a></li>
                                     <li class="nav-item"><a class="nav-link" href="blog.php">Blog</a></li>
@@ -61,7 +61,7 @@
                                 </a>
                                 <ul class="navbar-nav ml-auto" id="nav" style="align-items: center;">
                                     <li class="nav-item"><a class="nav-link" href="{{ route('events') }}">Próximos cursos</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="contacto.php">Contacto</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contacto</a></li>
                                     <div class="menu-social-icon">
                                         <a href="https://www.facebook.com/MEExperiencias" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                         <a href="https://www.linkedin.com/company/meexperiencias/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
@@ -104,7 +104,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-1-5 col-md-3 mb-4 mb-md-0">
-                        <img src="img/core-img/logo-footer.svg" class="mb-3" alt="">
+                        <img src="{{ asset('img/core-img/logo-footer.svg') }}" class="mb-3" alt="">
                         <p class="text-white">Somos especialistas en Felicidad Organizacional y nos apasiona trabajar con otros para crecer, aprender y actualizarnos</p>
                         <div class="footer-social-icon">
                             <a href="https://www.facebook.com/MEExperiencias" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -118,12 +118,12 @@
                             <h3>Contacto</h3>
                         </div>
                         <div class="footer-text2">
-                            <img src="img/core-img/mail.svg" class="float-left mr-2 mb-1" alt="">
+                            <img src="{{ asset('img/core-img/mail.svg') }}" class="float-left mr-2 mb-1" alt="">
                             <h4>EscribiME</h4>
                             <p>contamemas@meexperiencias.com</p>
                         </div>
                         <div class="footer-text2">
-                            <img src="img/core-img/tel.svg" class="float-left mr-2 mb-1" alt="">
+                            <img src="{{ asset('img/core-img/tel.svg') }}" class="float-left mr-2 mb-1" alt="">
                             <h4>LlamaME</h4>
                             <p>+54-9-351-2017150</p>
                         </div>
@@ -133,12 +133,12 @@
                             <h3>Enlaces</h3>
                         </div>
                         <ul>
-                            <li class="mb-3"><a href="bienvenido.php">Bienvenido</a></li>
-                            <li class="mb-3"><a href="nosotras.php">¿Quienes somos?</a></li>
-                            <li class="mb-3"><a href="servicios.php">¿Qué hacemos?</a></li>
-                            <li class="mb-3"><a href="blog.php">Blog</a></li>
-                            <li class="mb-3"><a href="cursos.php">Próximos cursos</a></li>
-                            <li class="mb-3"><a href="contacto.php">Contacto</a></li>
+                            <li class="mb-3"><a href="{{ route('welcome') }}">Bienvenido</a></li>
+                            <li class="mb-3"><a href="{{ route('about') }}">¿Quienes somos?</a></li>
+                            <li class="mb-3"><a href="{{ route('service') }}">¿Qué hacemos?</a></li>
+                            <li class="mb-3"><a href="#">Blog</a></li>
+                            <li class="mb-3"><a href="{{ asset('events') }}">Próximos cursos</a></li>
+                            <li class="mb-3"><a href="{{ asset('contact') }}">Contacto</a></li>
                         </ul>
                     </div>
                     <div class="col-1-5 col-md-2 mb-4 mb-md-0">
@@ -146,10 +146,10 @@
                             <h3>Servicios</h3>
                         </div>
                         <ul>
-                            <li class="mb-3"><a href="servicios.php#asesoria">Asesoría</a></li>
-                            <li class="mb-3"><a href="servicios.php#cursos">Cursos de formación</a></li>
-                            <li class="mb-3"><a href="servicios.php#team-building">Team building</a></li>
-                            <li class="mb-3"><a href="servicios.php#charlas">Charlas y conferencias</a></li>
+                            <li class="mb-3"><a href="{{ route('service') }}#asesoria">Asesoría</a></li>
+                            <li class="mb-3"><a href="{{ route('service') }}#cursos">Cursos de formación</a></li>
+                            <li class="mb-3"><a href="{{ route('service') }}#team-building">Team building</a></li>
+                            <li class="mb-3"><a href="{{ route('service') }}#charlas">Charlas y conferencias</a></li>
                         </ul>
                     </div>
                     <div class="col-1-5 col-md-2 mb-4 mb-md-0">

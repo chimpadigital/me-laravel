@@ -12,8 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 })->name('/');
+
+Route::get('/bienvenido', function () {
+    return view('welcome');
+})->name('welcome');
 
 Route::get('/locale','PageController@locale');
 
