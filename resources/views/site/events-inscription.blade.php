@@ -59,6 +59,7 @@
                                         <div class="col-12">
                                         <div class="form-group">
                                             <select class="form-control" name="method_payment" id="method_payment">
+                                                <option value="default" selected disabled>Elegir metodo de pago</option>
                                                 <option value="mercado_pago"><i class="fa fab-mp"></i>MercadoPago</option>
                                                 <option value="transferencia"><i class="fa fa-bank"></i>Transferencia Bancaria</option>
                                             </select>

@@ -16,11 +16,11 @@
 					   		
 					   		<div class="col-md-6 form-group">
 						   		<label for="email">Email</label>
-						        <input class="form-control" id="email" name="email" value="test_user_19653727@testuser.com" type="email" placeholder="your email"/>
+						        <input class="form-control" id="email" name="email" value="ejemplo@ejemplo.com" type="email" placeholder="your email"/>
 						   	</div>
 
 						   	<div class="col-md-6 form-group">
-						   		<label for="cardNumber">Credit card number:</label>
+						   		<label for="cardNumber">Número de tarjeta:</label>
 						        <input class="form-control" type="text" id="cardNumber" data-checkout="cardNumber" placeholder="4509 9535 6623 3704" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off />
 						   	</div>
 
@@ -29,30 +29,30 @@
 
 					   	<div class="form-row">
 					   		
-					   		<div class="col-md-6 form-group">
+					   		<div class="col-md-3 form-group">
 						   		
-						   		<label for="securityCode">Security code:</label>
+						   		<label for="securityCode">Código de seguridad:</label>
 						        <input class="form-control" type="text" id="securityCode" data-checkout="securityCode" placeholder="123" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off />
 
 						   	</div>
 
-						   	<div class="col-md-6 form-group">
-						   		<label for="cardExpirationMonth">Expiration month:</label>
+						   	<div class="col-md-3 form-group">
+						   		<label for="cardExpirationMonth">Més de vencimiento:</label>
 						        <input class="form-control" type="text" id="cardExpirationMonth" data-checkout="cardExpirationMonth" placeholder="12" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off />
 						   	</div>
 
+							<div class="col-md-3 form-group">
+									<label for="cardExpirationYear">Año de vencimiento:</label>
+								<input class="form-control" type="text" id="cardExpirationYear" data-checkout="cardExpirationYear" placeholder="2015" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off />
+							</div>
 
 					   	</div>
 					   	
 						<div class="form-row">
 							
-							<div class="col-md-6 form-group">
-						   		<label for="cardExpirationYear">Expiration year:</label>
-						        <input class="form-control" type="text" id="cardExpirationYear" data-checkout="cardExpirationYear" placeholder="2015" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off />
-						   	</div>
-						   	<div class="col-md-6 form-group">
-						   		<label for="cardholderName">Card holder name:</label>
-						        <input class="form-control" type="text" id="cardholderName" data-checkout="cardholderName" placeholder="APRO" />
+						   	<div class="col-md-12 form-group">
+						   		<label for="cardholderName">Nombre y Apellido:</label>
+						        <input class="form-control" type="text" id="cardholderName" data-checkout="cardholderName" placeholder="Según se muestra en la tarjeta" />
 						   	</div>
 
 						</div>
@@ -60,11 +60,11 @@
 					   	<div class="form-row">
 					   		
 							<div class="col-md-6 form-group">
-						   		<label for="docType">Document type:</label>
+						   		<label for="docType">Tipo de documentación:</label>
 						        <select class="form-control" id="docType" data-checkout="docType"></select>
 						   	</div>
 						   	<div class="col-md-6 form-group">
-						   		<label for="docNumber">Document number:</label>
+						   		<label for="docNumber">Número:</label>
 						        <input class="form-control" type="text" id="docNumber" data-checkout="docNumber" placeholder="12345678" />
 						   	</div>
 					
@@ -73,7 +73,7 @@
 					            
 	
 					        <input id="paymentMethodId" type="hidden" name="paymentMethodId" />
-					        <input class="btn btn-success" type="submit" value="Pay!" />
+					        <input class="btn btn-success" type="submit" value="Pagar" />
 					
 					</form>
                 </div>
@@ -103,6 +103,9 @@
 
              
             </div>
+		</div>
+		<div class="welcome-thumb2 wow fadeInDown" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;">
+            <img src="{{ asset('img/bg-img/evento-bg.svg') }}" alt="">
         </div>
        
     </section>
