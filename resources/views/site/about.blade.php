@@ -23,7 +23,7 @@
                         <div class="col-12 col-md-3"></div>
                         <div class="col-12 col-md-6 text-center">
                             
-                            <p class="text-white">Somos especialistas en Felicidad Organizacional y nos apasiona trabajar con otros <br> para crecer, aprender y actualizarnos.<br>
+                            <p class="text-white">Somos especialistas en Felicidad Organizacional y nos apasiona trabajar con otros para crecer, aprender y actualizarnos.<br></br>
                             Creemos que para transformar nuestra realidad local, es necesario desarrollar la inteligencia colectiva a nivel global, por eso, nos nutrimos de una red de socios estratégicos en latinoamérica, potenciando la vanguardia en la gestión de talentos organizacionales.</p>
                             
                         </div>
