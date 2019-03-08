@@ -20,14 +20,14 @@
             <div class="somos wow fadeInUp somos position-relative" data-wow-delay="0.3s">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-md-1"></div>
-                        <div class="col-12 col-md-10 text-center">
+                        <div class="col-12 col-md-3"></div>
+                        <div class="col-12 col-md-6 text-center">
                             
                             <p class="text-white">Somos especialistas en Felicidad Organizacional y nos apasiona trabajar con otros <br> para crecer, aprender y actualizarnos.<br>
                             Creemos que para transformar nuestra realidad local, es necesario desarrollar la inteligencia colectiva a nivel global, por eso, nos nutrimos de una red de socios estratégicos en latinoamérica, potenciando la vanguardia en la gestión de talentos organizacionales.</p>
                             
                         </div>
-                        <div class="col-12 col-md-1"></div>
+                        <div class="col-12 col-md-3"></div>
     
                     </div>
                 </div>
@@ -405,7 +405,7 @@
                         <h2 class="mb-3">Dónde estamos</h2>
                         <p>¡La felicidad es ilimitada! y brindamos asesoría a nivel global</p>
                         <h4 class="mb-3">Si estás en otro país</h4>
-                        <a href="" class="btn-primary wow fadeInLeft" data-wow-delay="0.9s">INFORMAME</a>
+                        <a href="#contact" class="btn-primary wow fadeInLeft" data-wow-delay="0.9s">INFORMAME</a>
                         <!-- <div class="line-shape"></div> -->
                     </div>
                 </div>

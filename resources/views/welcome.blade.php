@@ -9,7 +9,7 @@
                 <div class="col-12 col-md-4">
                     <div class="wellcome-heading wow fadeInLeft text-center text-md-left" data-wow-delay="0.7s">
                         <h2 class="mb-5">Consultora en Felicidad Organizacional</h2>
-                        <a href="servicios.php" class="btn-primary wow fadeInLeft mt-5" data-wow-delay="0.9s">INFORMAME</a>
+                        <a href="#about" class="btn-primary wow fadeInLeft mt-5" data-wow-delay="0.9s">INFORMAME</a>
                     </div>
                 </div>
                 <div class="col-12 col-md-2"></div>

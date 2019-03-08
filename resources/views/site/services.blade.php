@@ -687,7 +687,7 @@
                 
                 <div class="col-md-5">
                     <!-- Heading Text  -->
-                    <div class="footer-heading">
+                    <div class="footer-heading" id="contact">
                         <h2>Contacto</h2>
                     </div>
                     <div class="footer-text">

@@ -51,7 +51,7 @@
                             <div class="collapse navbar-collapse" id="ca-navbar">
                                 <ul class="navbar-nav mr-auto" id="nav" style="align-items: center;">
                                     <li class="nav-item"><a class="nav-link" href="{{ route('welcome') }}"><span class="active-nuevo">Bienvenido</span></a></li>
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">¿Quienes Somos?</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">¿Quiénes Somos?</a></li>
                                     <li class="nav-item"><a class="nav-link" href="{{ route('service') }}">¿Qué hacemos?</a></li>
                                     <li class="nav-item"><a class="nav-link" href="blog.php">Blog</a></li>
                                     
@@ -103,7 +103,7 @@
             <!-- footer logo -->
             <div class="container">
                 <div class="row">
-                    <div class="col-1-5 col-md-3 mb-4 mb-md-0">
+                    <div class="col-1-5 col-md-2 mb-4 mb-md-0">
                         <img src="{{ asset('img/core-img/logo-footer.svg') }}" class="mb-3" alt="">
                         <p class="text-white">Somos especialistas en Felicidad Organizacional y nos apasiona trabajar con otros para crecer, aprender y actualizarnos</p>
                         <div class="footer-social-icon">
@@ -152,7 +152,7 @@
                             <li class="mb-3"><a href="{{ route('service') }}#charlas">Charlas y conferencias</a></li>
                         </ul>
                     </div>
-                    <div class="col-1-5 col-md-2 mb-4 mb-md-0">
+                    <div class="col-1-5 col-md-3 mb-4 mb-md-0">
                         <div class="fb-page" data-href="https://www.facebook.com/MEExperiencias/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-height="300" data-width=""data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/MEExperiencias/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/MEExperiencias/">ME Consultora en Felicidad Organizacional</a></blockquote></div>
                     </div>
                 </div>
