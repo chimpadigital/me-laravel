@@ -91,9 +91,9 @@ class PageController extends Controller
 
 		    switch ($payment->status) {
 		    	case 'approved':
-		    		//Mail::to('admin@admin.com')->send(new EmailAdminInscription($event,$session,$payment));
+		    		Mail::to('admin@admin.com')->send(new EmailAdminInscription($event,$session,$payment));
 
-		    		//Mail::to($session['email'])->send(new EmailUserInscription($event,$session,$payment));
+		    		Mail::to($session['email'])->send(new EmailUserInscription($event,$session,$payment));
 		    		
 		    		return view('shoping.thanks',[
 		    			'event'=>$event,

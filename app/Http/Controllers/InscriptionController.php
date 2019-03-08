@@ -80,9 +80,9 @@ class InscriptionController extends Controller
 
             $event = Event::where('id',$session['event'])->first();
 
-            //Mail::to('admin@admin.com')->send(new EmailAdminBank($event,$session));
+            Mail::to('admin@admin.com')->send(new EmailAdminBank($event,$session));
 
-            //Mail::to($session['email'])->send(new EmailUserBank($event,$session));
+            Mail::to($session['email'])->send(new EmailUserBank($event,$session));
 
             return view('shoping.thanks',
                 [
