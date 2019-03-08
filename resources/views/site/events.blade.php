@@ -19,12 +19,12 @@
                 </div>
             </div>
         </div>
-        <div class="special-area cursos wow fadeInUp" data-wow-delay="0.3s" id="eventos">
+        <div class="special-area cursos wow fadeInUp" data-wow-delay="0.3s">
             <div class="container">
                 <div class="row mt-7">
                     <div class="col-12 text-center">
                         <!-- Section Heading Area -->
-                        <div class="section-heading text-center">
+                        <div class="section-heading text-center" id="eventos">
                             <h2 class="color-amarillo">Próximos eventos</h2>
                             <!-- <div class="line-shape"></div> -->
                         </div>

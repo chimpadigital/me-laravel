@@ -73,7 +73,7 @@
                         
                         <a href="{{ route('events.inscription.front',$event->id) }}" class="btn btn-primary mt-5">Inscribirse</a>
 
-                        <h6 class="mt-3"><b>*Información importante !! La inscripción finaliza cuando realizas el pago total del curso por medio de transferencia bancaria.</b> </h6>
+                        <!-- <h6 class="mt-3"><b>*Información importante !! La inscripción finaliza cuando realizas el pago total del curso por medio de transferencia bancaria.</b> </h6> -->
                         <!-- <p>Datos para realizar la transferencia:</p>
                         <ul class="evento">
                             <li>
