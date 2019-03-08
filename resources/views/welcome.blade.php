@@ -60,7 +60,7 @@
                             <img src="{{ asset('img/core-img/asesoria.svg') }}" alt="">
                         </div>
                         <h4 class="mb-60">Asesoría</h4>
-                        <a href="servicios.php" class="btn-primary btn-yellow">CONOCEME</a>
+                        <a href="{{ route('service') }}#asesoria" class="btn-primary btn-yellow">CONOCEME</a>
                     </div>
                 </div>
                 <!-- Single Special Area -->
@@ -70,7 +70,7 @@
                             <img src="{{ asset('img/core-img/cursos.svg') }}" alt="">
                         </div>
                         <h4  class="mb-30">Cursos de Formación</h4>
-                        <a href="servicios.php" class="btn-primary btn-yellow">CONOCEME</a>
+                        <a href="{{ route('service') }}#cursos" class="btn-primary btn-yellow">CONOCEME</a>
                     </div>
                 </div>
                 <!-- Single Special Area -->
@@ -80,7 +80,7 @@
                             <img src="{{ asset('img/core-img/team.svg') }}" alt="">
                         </div>
                         <h4  class="mb-30">Team<br>Building</h4>
-                        <a href="servicios.php" class="btn-primary btn-yellow">CONOCEME</a>
+                        <a href="{{ route('service') }}#team-building" class="btn-primary btn-yellow">CONOCEME</a>
                         
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                             <img src="{{ asset('img/core-img/charlas.svg') }}" alt="">
                         </div>
                         <h4  class="mb-30">Charlas y Conferencias</h4>
-                        <a href="servicios.php" class="btn-primary btn-yellow">CONOCEME</a>
+                        <a href="{{ route('service') }}#charlas" class="btn-primary btn-yellow">CONOCEME</a>
                         
                     </div>
                 </div>
