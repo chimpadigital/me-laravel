@@ -5,6 +5,14 @@
   <!-- ***** Wellcome Area Start ***** -->
     <section class="wellcome_area clearfix bg-white position-relative" id="home">
         <div class="container h-100 mt-7">
+			@if (session('successMail'))
+				<div class="col-md-12">
+					<div class="alert alert-warning alert-styled-left alert-dismissible">
+						<button type="button" class="close" data-dismiss="alert"><span>×</span></button>
+						<span class="font-weight-semibold">{{ session('successMail') }}</span>
+					</div>
+				</div>
+			@endif
             <div class="row h-100 align-items-center">
                 <div class="col-12 col-md-4">
                     <div class="wellcome-heading wow fadeInLeft text-center text-md-left" data-wow-delay="0.7s">
@@ -36,6 +44,12 @@
             <img src="{{ asset('img/ilustraciones/fondo-circulo.svg') }}" alt="">
         </div>
     </section>
+	@if (isset($message))
+        <div class="alert alert-warning alert-styled-left alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert"><span>×</span></button>
+            <span class="font-weight-semibold">{{ $message }}</span>
+        </div>
+    @endif
     <!-- ***** Wellcome Area End ***** -->
 
     <!-- ***** Special Area Start ***** -->
@@ -321,7 +335,7 @@
 													<h5>{{$events[$i]->name}}</h5>
 													<ul class="d-inline-flex charla-info">
 														<li>
-															<i class="fa fa-calendar"></i> {{$events[$i]->date_start}}
+															<i class="fa fa-calendar"></i> {{date('d',strtotime($events[$i]->date_start)) }} / {{ date('m',strtotime($events[$i]->date_start))}}
 														</li>
 														<li>
 															<i class="fa fa-clock-o"></i> {{$events[$i]->hour}}
@@ -349,7 +363,7 @@
 													<h5>{{$events[$i]->name}}</h5>
 													<ul class="d-inline-flex charla-info">
 														<li>
-															<i class="fa fa-calendar"></i> {{$events[$i]->date_start}}
+															<i class="fa fa-calendar"></i> {{date('d',strtotime($events[$i]->date_start)) }} / {{ date('m',strtotime($events[$i]->date_start))}}
 														</li>
 														<li>
 															<i class="fa fa-clock-o"></i> {{$events[$i]->hour}}

@@ -23,7 +23,7 @@ class PageController extends Controller
 
     public function events()
     {
-    	$events = Event::with('country')->country()->paginate(10);
+    	$events = App::call('App\Http\Controllers\EventsController@getNextEvents');
 
     	//dd($events);
 
@@ -174,9 +174,17 @@ class PageController extends Controller
 		
 		$headers =  'MIME-Version: 1.0' . "\r\n"; 
 		$headers .= 'From: '.$request->email;
-		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
+		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+		
+		if(session('country') == 'ar')
+			$to = 'contamemas@meexperiencias.com';
+		if(session('country') == 'cr')
+			$to = 'holacostarica@meexperiencias.com';
 
-		mail("admin@admin","Contacto de ".$request->name." desde el formulario de la página web",$msg, $headers);
+		mail($to,"Contacto de ".$request->name." desde el formulario de la página web",$msg, $headers);
+		
+		session()->flash('successMail', 'Tu mensaje ha sido enviado');
+		
 		return redirect()->route('welcome');
 	}
 	

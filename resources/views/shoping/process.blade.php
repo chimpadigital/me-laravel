@@ -14,7 +14,7 @@
                                 <div class="col-10">
                                     <h3 class="mb-3">Ya casi</h3>
                                     <div class="wellcome-heading wow fadeInLeft" data-wow-delay="0.7s">
-                                        <h2>Tu pago esta siendo procesesado, te enviamos un mail con instrucciones para completar tu inscripción</h2>
+                                        <h2>Tu pago esta siendo procesesado</h2>
                                     </div>
                                 </div>
                                 
