@@ -15,7 +15,7 @@ class EventsController extends Controller
      */
     public function index()
     {
-        $events = Event::with('country')->country()->paginate(50);
+        $events = Event::with('country')->paginate(50);
 
         return view('events.index',[
             'events'=>$events,
@@ -84,7 +84,7 @@ class EventsController extends Controller
             'img'=>$request->file('img')->store('img_events','public'),
         ]);
 
-        return back();
+        return redirect()->route('events.index')->with('success','Creado Exitosamente');
     }
 
     /**
@@ -104,9 +104,20 @@ class EventsController extends Controller
      * @param  \App\Events  $events
      * @return \Illuminate\Http\Response
      */
-    public function edit(Events $events)
+    public function edit($id)
     {
-        //
+        $event = Event::where('id',$id)->first();
+
+        if (!$event) {
+            abort(404);
+        }
+
+        $countries = Country::all();
+
+        return view('events.edit',[
+            'event'=>$event,
+            'countries'=>$countries,
+        ]);
     }
 
     /**
@@ -116,9 +127,46 @@ class EventsController extends Controller
      * @param  \App\Events  $events
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Events $events)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'title'=>['required','string'],
+            'description'=>['required','string'],
+            'date_start'=>['required','date'],
+            'hour'=>['required','string'],
+            'address'=>['required','string'],
+            'temary'=>['required','string'],
+            'about'=>['required','string'],
+            'price'=>['required','numeric'],
+            'img'=>['file'],
+            'contry_id'=>['required', 'string'],
+        ]);
+
+        $event = Event::where('id',$id)->first();
+
+        $this->img = $event->img;
+
+
+        if ($request->file('img')) 
+        {
+            $this->img = $request->file('img')->store('img_events','public');
+        }
+
+        $event->update([
+            'name'=>$request->input('title'),
+            'description'=>$request->input('description'),
+            'date_start'=>$request->input('date_start'),
+            'hour'=>$request->input('hour'),
+            'address'=>$request->input('address'),
+            'temary'=>$request->input('temary'),
+            'about_event'=>$request->input('about'),
+            'price'=>$request->input('price'),
+            'country_id'=>$request->input('contry_id'),
+            'img'=>$this->img,
+        ]);
+
+        return back()->with('status','Actualizado Exitosamente');
+
     }
 
     /**
@@ -127,8 +175,12 @@ class EventsController extends Controller
      * @param  \App\Events  $events
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Events $events)
+    public function destroy($id)
     {
-        //
+        $event = Event::where('id',$id)->first();
+
+        $event->delete();
+
+        return back()->with('success','Eliminado Exitosamente');
     }
 }
