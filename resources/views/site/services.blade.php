@@ -1007,3 +1007,8 @@
     <!-- ***** Contact Us Area End ***** -->    
 
 @endsection
+@section('section-scripts')
+<script type="text/javascript">
+    $('#service').addClass('active-nuevo');
+</script>
+@endsection

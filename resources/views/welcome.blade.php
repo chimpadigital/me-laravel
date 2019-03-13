@@ -714,3 +714,9 @@
     <!-- ***** Contact Us Area End ***** -->    
 
 @endsection
+
+@section('section-scripts')
+<script type="text/javascript">
+    $('#bienvenido').addClass('active-nuevo');
+</script>
+@endsection

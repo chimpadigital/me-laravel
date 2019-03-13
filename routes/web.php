@@ -72,10 +72,6 @@ Route::post('/cursos/payments', 'PageController@payment')->name('events.payments
 
 Route::post('/cursos/sendEmail', 'PageController@sendEmail');
 
-Route::get('/user/create', 'PageController@createUserTest');
-
-
-Route::get('/test', 'PageController@paymentMEthods');
 
 /*MercadoPago redirects*/
 Route::get('/thanks', 'PageController@thanks');

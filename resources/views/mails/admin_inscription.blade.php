@@ -7,6 +7,6 @@
 <p>{{ session('email') }}</p>
 <p>{{ session('phone') }}</p>
 <p>{{ session('message') }}</p>
-<p>Moto de la transacción:{{ $event->price }}</p>
+<p>ID de la transacción:{{ $id }}</p>
 </body>
 </html>

@@ -352,3 +352,8 @@
     <!-- ***** Wellcome Area End ***** -->
 
 @endsection
+@section('section-scripts')
+<script type="text/javascript">
+    $('#contact').addClass('active-nuevo');
+</script>
+@endsection

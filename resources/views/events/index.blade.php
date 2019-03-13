@@ -63,8 +63,7 @@
 						<td>
 							<div class="align-self-center ml-3">
 							<div class="list-icons list-icons-extended">
-								<a href="#" class="list-icons-item" data-popup="tooltip" title="Ver" data-original-title="Ver"><i class="icon-eye" id="confirm"></i></a>
-		                    	<a href="{{ route('events.edit',$event->id) }}" class="list-icons-item" data-popup="tooltip" title="Modificar"  data-original-title="Mdificar"><i class="icon-gear"></i></a>
+		                    	<a href="{{ route('events.edit',$event->id) }}" class="list-icons-item" data-popup="tooltip" title="Modificar"  data-original-title="Mdificar"><i class="icon-pencil7"></i></a>
 		                    	<form action="{{ route('events.destroy',$event->id) }}" method="POST">
 								    @method('DELETE')
 								    @csrf

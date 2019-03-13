@@ -143,30 +143,6 @@ class PageController extends Controller
     	
     }
 
-    public function createUserTest()
-    {
-
-		 SDK::setAccessToken("TEST-426245754543658-030615-5da329c447d20783fae169b9d5022434-413578258");
-
-		  $body = array(
-		    "json_data" => array(
-		      "site_id" => "MLA"
-		    )
-		  );
-
-		  $result = SDK::post('/users/test_user', $body);
-
-		  var_dump($result);
-    }
-
-    public function paymentMEthods()
-    {
-    	SDK::setAccessToken(env('MERCADOPAGOAPI'));
-
-    	$method_payments = MercadoPago::get("/v1/payment_methods");
-
-    	dd($method_payments);
-    }
 	
 	public function sendEmail(Request $request){		
 		$msg = $request->message."\n\nNombre: ".$request->name."\nTeléfono: ".$request->phone."\nPaís: ".$request->country;
@@ -176,9 +152,9 @@ class PageController extends Controller
 		$headers .= 'From: '.$request->email;
 		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 		
-		if(session('country') == 'ar')
+		if(app('config')->get('app.country') == 'ar')
 			$to = 'contamemas@meexperiencias.com';
-		if(session('country') == 'cr')
+		if(app('config')->get('app.country') == 'cr')
 			$to = 'holacostarica@meexperiencias.com';
 
 		mail($to,"Contacto de ".$request->name." desde el formulario de la página web",$msg, $headers);
@@ -188,13 +164,21 @@ class PageController extends Controller
 		return redirect()->route('welcome');
 	}
 	
-	public function thanks(){
+	public function thanks(Request $request){
+
+		$request->input('merchant_order_id');
 		$event = Event::where('id',session('eventId'))->first();
 		
 		$session = session()->all();
+
+		if(app('config')->get('app.country') == 'ar')
+			$to = 'contamemas@meexperiencias.com';
+		if(app('config')->get('app.country') == 'cr')
+			$to = 'holacostarica@meexperiencias.com';
 		
-		Mail::to('admin@admin')->send(new EmailAdminInscription($event,$session,""));
-		Mail::to($session['email'])->send(new EmailUserInscription($event,$session,""));
+		Mail::to($to)->send(new EmailAdminInscription($event,$session,$request->input('merchant_order_id')));
+
+		Mail::to($session['email'])->send(new EmailUserInscription($event,$session,$request->input('merchant_order_id')));
 					
 		$nextEvents = App::call('App\Http\Controllers\EventsController@getNextEvents');
 		return view('shoping.thanks')->with('nextEvents', $nextEvents);
