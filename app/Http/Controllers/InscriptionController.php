@@ -107,7 +107,7 @@ class InscriptionController extends Controller
 			
 			$preference->save();
 		
-			return redirect($preference->sandbox_init_point); //init_point to prod
+			return redirect($preference->init_point); //init_point to prod
         }
         else
         {
