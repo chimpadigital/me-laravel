@@ -13,18 +13,18 @@ class EmailAdminInscription extends Mailable
 
     public $event;
     public $session;
-    public $payment;
+    public $id;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($event,$session,$payment)
+    public function __construct($event,$session,$id)
     {
         $this->event = $event;
         $this->session = $session;
-        $this->payment = $payment;
+        $this->id = $id;
         
     }
 

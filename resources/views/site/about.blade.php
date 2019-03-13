@@ -760,3 +760,8 @@
 
 
 @endsection
+@section('section-scripts')
+<script type="text/javascript">
+    $('#about').addClass('active-nuevo');
+</script>
+@endsection

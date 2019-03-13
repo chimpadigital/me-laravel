@@ -50,18 +50,18 @@
                             <!-- Menu Area -->
                             <div class="collapse navbar-collapse" id="ca-navbar">
                                 <ul class="navbar-nav mr-auto" id="nav" style="align-items: center;">
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('welcome') }}"><span class="active-nuevo">Bienvenido</span></a></li>
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">¿Quiénes Somos?</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('service') }}">¿Qué hacemos?</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('blog') }}">Blog</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('welcome') }}"><span id="bienvenido" class="">Bienvenido</span></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('about') }}"><span id="about" class="">¿Quiénes Somos?</span></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('service') }}"><span id="service" class="">¿Qué hacemos?</span></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('blog') }}"><span id="blog" class="">Blog</span></a></li>
                                     
                                 </ul>
                                 <a class="navbar-brand d-none d-xl-block" href="{{ route('welcome') }}">
                                     <img src="{{ asset('img/core-img/logo-menu.svg') }}" alt="">
                                 </a>
                                 <ul class="navbar-nav ml-auto" id="nav" style="align-items: center;">
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('events') }}">Próximos cursos</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contacto</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('events') }}"><span id="events" class="">Próximos cursos</span></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}"><span id="contact" class="">Contacto</span></a></li>
                                     <div class="menu-social-icon">
                                         <a href="https://www.facebook.com/MEExperiencias" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                         <a href="https://www.linkedin.com/company/meexperiencias/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>

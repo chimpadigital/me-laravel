@@ -123,3 +123,8 @@
     </section>
 
 @endsection
+@section('section-scripts')
+<script type="text/javascript">
+    $('#blog').addClass('active-nuevo');
+</script>
+@endsection

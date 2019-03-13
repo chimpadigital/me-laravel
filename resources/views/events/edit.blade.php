@@ -53,7 +53,7 @@
 				
 				@csrf
 
-				@method('PUT');
+				@method('PUT')
 				
 				<div class="form-row">
 					
