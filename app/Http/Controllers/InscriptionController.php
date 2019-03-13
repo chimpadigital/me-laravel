@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\EmailAdminBank;
 use App\Mail\EmailUserBank;
 use MercadoPago\SDK;
+use App;
 
 class InscriptionController extends Controller
 {
@@ -119,14 +120,21 @@ class InscriptionController extends Controller
 
             $event = Event::where('id',$session['event'])->first();
 
-            Mail::to('admin@admin.com')->send(new EmailAdminBank($event,$session));
+            if(app('config')->get('app.country') == 'ar')
+            {
+                $to = 'contamemas@meexperiencias.com';
+            }
+            if(app('config')->get('app.country') == 'cr')
+            {
+                $to = 'holacostarica@meexperiencias.com';
+            }
+
+            Mail::to($to)->send(new EmailAdminBank($event,$session));
 
             Mail::to($session['email'])->send(new EmailUserBank($event,$session));
 
-            return view('shoping.thanks',
-                [
-                'event'=>$event,
-                ]);
+            $nextEvents = App::call('App\Http\Controllers\EventsController@getNextEvents');
+            return view('shoping.thanks')->with('nextEvents', $nextEvents);
 
         }
 

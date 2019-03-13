@@ -153,9 +153,13 @@ class PageController extends Controller
 		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 		
 		if(app('config')->get('app.country') == 'ar')
+		{
 			$to = 'contamemas@meexperiencias.com';
+		}
 		if(app('config')->get('app.country') == 'cr')
+		{
 			$to = 'holacostarica@meexperiencias.com';
+		}
 
 		mail($to,"Contacto de ".$request->name." desde el formulario de la página web",$msg, $headers);
 		
@@ -172,13 +176,19 @@ class PageController extends Controller
 		$session = session()->all();
 
 		if(app('config')->get('app.country') == 'ar')
+		{
 			$to = 'contamemas@meexperiencias.com';
+		}
 		if(app('config')->get('app.country') == 'cr')
+		{
 			$to = 'holacostarica@meexperiencias.com';
+		}
 		
-		Mail::to($to)->send(new EmailAdminInscription($event,$session,$request->input('merchant_order_id')));
+		$id = $request->input('merchant_order_id');
 
-		Mail::to($session['email'])->send(new EmailUserInscription($event,$session,$request->input('merchant_order_id')));
+		Mail::to($to)->send(new EmailAdminInscription($event,$session,$id));
+
+		Mail::to($session['email'])->send(new EmailUserInscription($event,$session,$id));
 					
 		$nextEvents = App::call('App\Http\Controllers\EventsController@getNextEvents');
 		return view('shoping.thanks')->with('nextEvents', $nextEvents);
