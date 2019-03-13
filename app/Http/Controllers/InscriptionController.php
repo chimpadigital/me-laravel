@@ -98,16 +98,20 @@ class InscriptionController extends Controller
 			$preference->items = array($item);
 			$preference->payer = $payer;
 			
+			$successUrl = strval(request()->getHttpHost()."/thanks");
+			$failureUrl = strval(request()->getHttpHost()."/failure");
+			$pendingUrl = strval(request()->getHttpHost()."/pending");
+			
 			$preference->back_urls = array(
-				"success" => "http://localhost:8000/thanks",
-				"failure" => "http://localhost:8000/failure",
-				"pending" => "http://localhost:8000/pending"
+				"success" => $successUrl,
+				"failure" => $failureUrl,
+				"pending" => $pendingUrl
 			);
 			$preference->auto_return = "approved";
 			
 			$preference->save();
 		
-			return redirect($preference->init_point); //init_point to prod
+			return redirect($preference->sandbox_init_point); //init_point to prod
         }
         else
         {
