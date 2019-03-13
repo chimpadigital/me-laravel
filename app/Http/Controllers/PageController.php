@@ -8,6 +8,8 @@ use MercadoPago\SDK;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\EmailAdminInscription;
 use App\Mail\EmailUserInscription;
+use App\Mail\EmailContactForm;
+use App;
 
 
 class PageController extends Controller
@@ -21,7 +23,7 @@ class PageController extends Controller
 
     public function events()
     {
-    	$events = Event::with('country')->country()->paginate(10);
+    	$events = App::call('App\Http\Controllers\EventsController@getNextEvents');
 
     	//dd($events);
 
@@ -39,25 +41,30 @@ class PageController extends Controller
     	}
 
     	//dd($events);
+		
+		session()->put('date_start', $event->date_start);
+		session()->put('hour', $event->hour);
+		session()->put('address', $event->address);
+		
+		$nextEvents = App::call('App\Http\Controllers\EventsController@getNextEvents');
 
-    	return view('site.event-show',[
-    		'event'=>$event,
-    	]);
+    	return view('site.event-show')->with('event', $event)->with('nextEvents', $nextEvents);
     }
 
     public function EventsInscription($id)
     {
     	$event = Event::with('country')->where('id',$id)->country()->first();
-
+		session()->put('eventId', $id);
+		
     	if (!$event) {
     		abort(404);
     	}
 
     	//dd($events);
-
-    	return view('site.events-inscription',[
-    		'event'=>$event,
-    	]);
+		
+		$nextEvents = App::call('App\Http\Controllers\EventsController@getNextEvents');
+		
+    	return view('site.events-inscription')->with('event', $event)->with('nextEvents', $nextEvents);
     }
 
     public function payment(Request $request)
@@ -95,8 +102,11 @@ class PageController extends Controller
 
 		    		Mail::to($session['email'])->send(new EmailUserInscription($event,$session,$payment));
 		    		
+					$nextEvents = App::call('App\Http\Controllers\EventsController@getNextEvents');
+					
 		    		return view('shoping.thanks',[
 		    			'event'=>$event,
+						'nextEvents'=>$nextEvents
 		    		]);
 
 		    		break;
@@ -111,7 +121,7 @@ class PageController extends Controller
 
 		    	case 'rejected':
 
-		    		return redirect()->route('events.inscription.front',$event->id)->with('error','Hubo un problema al procesar tu pago, por favor selecciona otro metodo de pago o reintenta mas tarde');
+		    		return redirect()->route('/cursos/payments',$event->id)->with('error','Hubo un problema al procesar tu pago, por favor selecciona otro metodo de pago o reintenta mas tarde');
 
 		    		break;
 
@@ -120,6 +130,12 @@ class PageController extends Controller
 		    		return redirect()->route('events.inscription.front',$event->id)->with('error','Hubo un problema al procesar tu pago, por favor selecciona otro metodo de pago o reintenta mas tarde');
 
 		    		break;
+				
+				default:
+					
+					return redirect()->route('events.inscription.front',$event->id)->with('error','Hubo un problema al procesar tu pago, por favor selecciona otro metodo de pago o reintenta mas tarde');
+					
+					break;
 		    }
     	}
 
@@ -151,5 +167,50 @@ class PageController extends Controller
 
     	dd($method_payments);
     }
+	
+	public function sendEmail(Request $request){		
+		$msg = $request->message."\n\nNombre: ".$request->name."\nTeléfono: ".$request->phone."\nPaís: ".$request->country;
+		$msg = wordwrap($msg,70);
+		
+		$headers =  'MIME-Version: 1.0' . "\r\n"; 
+		$headers .= 'From: '.$request->email;
+		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+		
+		if(session('country') == 'ar')
+			$to = 'contamemas@meexperiencias.com';
+		if(session('country') == 'cr')
+			$to = 'holacostarica@meexperiencias.com';
+
+		mail($to,"Contacto de ".$request->name." desde el formulario de la página web",$msg, $headers);
+		
+		session()->flash('successMail', 'Tu mensaje ha sido enviado');
+		
+		return redirect()->route('welcome');
+	}
+	
+	public function thanks(){
+		$event = Event::where('id',session('eventId'))->first();
+		
+		$session = session()->all();
+		
+		Mail::to('admin@admin')->send(new EmailAdminInscription($event,$session,""));
+		Mail::to($session['email'])->send(new EmailUserInscription($event,$session,""));
+					
+		$nextEvents = App::call('App\Http\Controllers\EventsController@getNextEvents');
+		return view('shoping.thanks')->with('nextEvents', $nextEvents);
+	}
+	
+	public function pending(){
+		$event = Event::where('id',session('event'))->first();
+		$nextEvents = App::call('App\Http\Controllers\EventsController@getNextEvents');
+		
+		return view('shoping.process')->with('nextEvents', $nextEvents);
+	}
+	
+	public function failure(){
+		$nextEvents = App::call('App\Http\Controllers\EventsController@getNextEvents');
+		$event = Event::where('id',session('eventId'))->first();
+		return view('site.events-inscription')->with('event', $event)->with('error', 'Hubo un problema al procesar tu pago, por favor selecciona otro metodo de pago o reintenta mas tarde')->with('nextEvents', $nextEvents);
+	}
 
 }

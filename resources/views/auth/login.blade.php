@@ -59,7 +59,8 @@
 					<div class="card mb-0">
 						<div class="card-body">
 							<div class="text-center mb-3">
-								<i class="icon-reading icon-2x text-slate-300 border-slate-300 border-3 rounded-round p-3 mb-3 mt-1"></i>
+								<img src="{{ asset('img/core-img/logo-menu.svg') }}" alt="">
+								<!-- <i class="icon-reading icon-2x text-slate-300 border-slate-300 border-3 rounded-round p-3 mb-3 mt-1"></i> -->
 								<h5 class="mb-0">Ingreso al sistema</h5>
 								
 							</div>

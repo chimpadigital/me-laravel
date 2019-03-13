@@ -20,7 +20,7 @@ class EmailUserInscription extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($event,$session,$payment)
     {
         $this->event = $event;
         $this->session = $session;

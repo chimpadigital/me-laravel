@@ -8,16 +8,21 @@
         <div class="container h-100 mt-8">
             <div class="row h-100">
                 <div class="col-12 col-md-5">
-                @if (session('error'))
+                @if (isset($error))
 
                         <div class="alert alert-warning alert-styled-left alert-dismissible">
                             <button type="button" class="close" data-dismiss="alert"><span>×</span></button>
-                            <span class="font-weight-semibold">{{ session('error') }}</span>
+                            <span class="font-weight-semibold">{{ $error }}</span>
                         </div>
                 @endif
                 <form action="{{ route('store.inscription') }}" method="post">
                             @csrf
+							<input type="hidden" name="price" value="{{$event->price}}"/>
+							<input type="hidden" name="eventName" value="{{$event->name}}"/>
                             <input name="event" type="hidden" value="{{$event->id}}">
+                            <input name="date_start" type="hidden" value="{{$event->date_start}}">
+                            <input name="hour" type="hidden" value="{{$event->hour}}">
+                            <input name="address" type="hidden" value="{{$event->address}}">
                             <!-- Message Input Area Start -->
                             <div class="contact_input_area">
                                 <div class="row">
@@ -121,82 +126,35 @@
                 </div>
                 <div class="row">
                     <div class="app_screenshots_slides owl-carousel">
-                        <div class="single-shot">
-                            <div class="single-team-member">
-                                <div class="charlas-image">
-                                    <img src="../img/charlas/11-4.jpg" alt="">
-                                    <div class="charlas-hover-effects">
-                                        <div class="charlas-social-icon">
-                                            <a href="11-4.php">
-                                                <h5>Comunicá efectivamente</h5>
-                                                <ul class="d-inline-flex charla-info">
-                                                    <li>
-                                                        <i class="fa fa-calendar"></i> 11 / 4
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-clock-o"></i> 18:00hs
-                                                    </li>
-                                                </ul>
-                                                <a href="" class="charlas-mas">
-                                                    <i class="fa fa-plus"></i>
-                                                </a>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-shot">
-                            <div class="single-team-member">
-                                <div class="charlas-image">
-                                    <img src="../img/charlas/9-5.jpg" alt="">
-                                    <div class="charlas-hover-effects">
-                                        <div class="charlas-social-icon">
-                                            <a href="9-5.php">
-                                                <h5>Nuevas economías</h5>
-                                                <ul class="d-inline-flex charla-info">
-                                                    <li>
-                                                        <i class="fa fa-calendar"></i> 09 / 5
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-clock-o"></i> 18:00hs
-                                                    </li>
-                                                </ul>
-                                                <a href="" class="charlas-mas">
-                                                    <i class="fa fa-plus"></i>
-                                                </a>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-shot">
-                            <div class="single-team-member">
-                                <div class="charlas-image">
-                                    <img src="../img/charlas/13-6.jpg" alt="">
-                                    <div class="charlas-hover-effects">
-                                        <div class="charlas-social-icon">
-                                            <a href="13-6.php">
-                                                <h5>Conocé tus fortalezas</h5>
-                                                <ul class="d-inline-flex charla-info">
-                                                    <li>
-                                                        <i class="fa fa-calendar"></i> 13 / 6
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-clock-o"></i> 18:00hs
-                                                    </li>
-                                                </ul>
-                                                <a href="" class="charlas-mas">
-                                                    <i class="fa fa-plus"></i>
-                                                </a>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @forelse($nextEvents as $ev)
+						<div class="single-shot">
+							<div class="single-team-member">
+								<div class="charlas-image">
+									<img src="{{asset('storage/'.$ev->img)}}" alt="">
+									<div class="charlas-hover-effects">
+										<div class="charlas-social-icon">
+											<a href="{{ route('events.show.front',$ev->id) }}">
+												<h5>{{$ev->name}}</h5>
+												<ul class="d-inline-flex charla-info">
+													<li>
+														<i class="fa fa-calendar"></i> {{$ev->date_start}}
+													</li>
+													<li>
+														<i class="fa fa-clock-o"></i> {{$ev->hour}}
+													</li>
+												</ul>
+												<a href="{{ route('events.show.front',$ev->id) }}" class="charlas-mas">
+													<i class="fa fa-plus"></i>
+												</a>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					@empty
+					@endforelse
+                </div>
                     
                 </div>
                 
