@@ -32,6 +32,9 @@ Route::group(['middleware'=>['auth']],function(){
 		'index'=>'events.index',
 		'create'=>'events.create',
 		'store'=>'events.store',
+		'edit'=>'events.edit',
+		'update'=>'events.update',
+		'destroy'=>'events.destroy',
 	]);
 
 });
