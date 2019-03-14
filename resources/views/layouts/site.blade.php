@@ -143,7 +143,8 @@
 							<div class="footer-text2">
 								<img src="{{ asset('img/core-img/tel.svg') }}" class="float-left mr-2 mb-1" alt="">
 								<h4>LlamaME</h4>
-								<p>+(507) 226-9030 | +(507) 6030-9389
+                                <p>+(507) 226-9030 </p>
+                                <p>+(507) 6030-9389</p>
 							</div>
 						</div>
 					@endif

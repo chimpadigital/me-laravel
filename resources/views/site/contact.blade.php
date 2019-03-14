@@ -26,6 +26,7 @@
                 
                 <div class="col-md-5">
                     <!-- Heading Text  -->
+                    @if(session('country') == 'ar')
                     <div class="footer-heading">
                         <h2>Contacto</h2>
                     </div>
@@ -39,6 +40,23 @@
                         <h4>LlamaME</h4>
                         <p>+54-9-351-2017150</p>
                     </div>
+                    @endif
+                    @if(session('country') == 'cr')
+                    <div class="footer-heading">
+                        <h2>Contacto</h2>
+                    </div>
+                    <div class="footer-text2">
+                        <img src="{{ asset('img/core-img/mail.svg') }}" class="float-left mr-2 mb-1" alt="">
+                        <h4>EscribiME</h4>
+                        <p>holacostarica@meexperiencias.com</p>
+                    </div>
+                    <div class="footer-text2">
+                        <img src="{{ asset('img/core-img/tel.svg') }}" class="float-left mr-2 mb-1" alt="">
+                        <h4>LlamaME</h4>
+                        <p>+(507) 226-9030 </p>
+                        <p>+(507) 6030-9389</p>
+                    </div>
+                    @endif
                     <div class="footer-social-icon">
                         <a href="https://www.facebook.com/MEExperiencias" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 <a href="https://twitter.com/meexperiencias" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
