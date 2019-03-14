@@ -12,9 +12,10 @@
                         <div class="contact_input_area">
                             <div class="row">
                                 <div class="col-10">
-                                    <h3 class="mb-3">Pago exitoso</h3>
+                                    <h3 class="mb-3 color-amarillo">Pago exitoso</h3>
                                     <div class="wellcome-heading wow fadeInLeft" data-wow-delay="0.7s">
-                                        <h2>Le enviamos los datos de su inscripción a su casilla de correo. Es posible que los necesite para corroborar su inscripción al momento de asistir al evento.</h2>
+                                        <h2>Le enviamos los datos de su inscripción a su casilla de correo.</h2>
+                                        <h4>Es posible que los necesite para corroborar su inscripción al momento de asistir al evento.</h4>
                                     </div>
                                 </div>
                             </div>
