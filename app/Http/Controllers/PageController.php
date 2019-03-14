@@ -154,11 +154,11 @@ class PageController extends Controller
 		
 		if(app('config')->get('app.country') == 'ar')
 		{
-			$to = 'contamemas@meexperiencias.com';
+			$to = 'sprados@chimpancedigital.com.ar';
 		}
 		if(app('config')->get('app.country') == 'cr')
 		{
-			$to = 'holacostarica@meexperiencias.com';
+			$to = 'sprados@chimpancedigital.com.ar';
 		}
 
 		mail($to,"Contacto de ".$request->name." desde el formulario de la página web",$msg, $headers);
