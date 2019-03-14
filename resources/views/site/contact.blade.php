@@ -48,7 +48,7 @@
                     <div class="footer-text">
                         <img src="{{ asset('img/core-img/mail.svg') }}" class="float-left mr-2 mb-1" alt="">
                         <h4>EscribiME</h4>
-                        <p>holacostarica@meexperiencias.com</p>
+                        <p class="mb-2">holacostarica@meexperiencias.com</p>
                     </div>
                     <div class="footer-text">
                         <img src="{{ asset('img/core-img/tel.svg') }}" class="float-left mr-2 mb-md-5" alt="">
