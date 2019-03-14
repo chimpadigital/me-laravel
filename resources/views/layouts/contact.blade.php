@@ -1,5 +1,5 @@
  <!-- ***** Contact Us Area Start ***** -->
-    <section class="footer-contact-area section_padding_100 clearfix bg-white" id="contact">
+    <section class="footer-contact-area section_padding_100 clearfix bg-white" id="contacto">
         <div class="container">
             <div class="row">
                 

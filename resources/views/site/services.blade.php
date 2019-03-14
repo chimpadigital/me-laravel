@@ -104,7 +104,7 @@
                                 <div class="row">
                                     <div class="col-12 col-md-7">
                                         <p class="mb-3">Acompañamiento en el análisis, formulación, evaluación y gestión de la estrategia organizacional para lograr los objetivos propuestos centrado en las personas.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contactoo" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/asesoria/estrategica.jpg') }}" alt="">
@@ -123,7 +123,7 @@
                                 <div class="row">
                                     <div class="col-12 col-md-7">
                                         <p class="mb-3">Asesoramiento contínuo sobre la planificación y ejecución de la comunicación efectiva entre los participantes dentro de la organización</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contactoo" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/asesoria/comunicacion.jpg') }}" alt="">
@@ -142,7 +142,7 @@
                                 <div class="row">
                                     <div class="col-12 col-md-7">
                                         <p class="mb-3">Acompañamiento en la implementación de acciones que reflejen la misión, visión y valores de la organización, generando un mayor compromiso por parte de los colaboradores con la firma.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/asesoria/cultura.jpg') }}" alt="">
@@ -161,7 +161,7 @@
                                 <div class="row">
                                     <div class="col-12 col-md-7">
                                         <p class="mb-3">Rediseñamos los procesos de gestión de equipos ajustándolos a las necesidades actuales de la empresa y realizamos la evaluación de resultados correspondiente.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/asesoria/porganizacionales.jpg') }}" alt="">
@@ -180,7 +180,7 @@
                                 <div class="row">
                                     <div class="col-12 col-md-7">
                                         <p class="mb-3">Guiamos y acompañamos a la organización en el proceso hacia la certificación de Empresa B.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0" >
                                         <img src="{{ asset('img/servicios/asesoria/empresab.jpg') }}" alt="">
@@ -217,7 +217,7 @@
                                 <div class="row">
                                     <div class="col-md-7 col-12">
                                         <p class="mb-3"><b>Diferenciarnos en la atención en los tiempos que corren, es clave.</b> Mejoramos las habilidades de ventas de los vendedores, encontrando conjuntamente soluciones a los desafíos que propone nuestros clientes.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/cursos/atencion.jpg') }}" alt="">
@@ -236,7 +236,7 @@
                                 <div class="row">
                                     <div class="col-md-7 col-12">
                                         <p class="mb-3"><b>Conocer a nuestro equipo y sus mayores fortalezas es esencial para lograr lo que nos proponemos.</b> Trabajamos en las virtudes del equipo para potenciar su trabajo, la relación interpersonal, la autonomía y la confianza.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/cursos/fortalezas.jpg') }}" alt="">
@@ -255,7 +255,7 @@
                                 <div class="row">
                                     <div class="col-md-7 col-12">
                                         <p class="mb-3"><b>La forma tradicional de gestionar empresas está llegando a su límite.</b> Acompañamos a los líderes de la organización en su gestión, empoderándolos y aumentando la confianza en sí mismos y en su equipo para que puedan alcanzar los objetivos propuestos.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/cursos/liderazgo.jpg') }}" alt="">
@@ -274,7 +274,7 @@
                                 <div class="row">
                                     <div class="col-md-7 col-12">
                                         <p class="mb-3"><b>Necesitamos personas con perspectivas distintas, que propongan cambios y tomen iniciativas.</b> Brindamos herramientas para que los miembros de la organización desarrollen sus habilidades comunicativas y la empatía, mejoren su escucha y comprendan mejor a sus interlocutores.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/cursos/comunicacion.jpg') }}" alt="">
@@ -293,7 +293,7 @@
                                 <div class="row">
                                     <div class="col-md-7 col-12">
                                         <p class="mb-3"><b>Del conflicto a la negociación.</b> Capacitamos a equipos de trabajos para mejorar sus habilidades de negociación, otorgando conocimiento de buenas prácticas que nos permitan la resolución de conflictos manteniendo negociaciones efectivas.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/cursos/negociar.jpg') }}" alt="">
@@ -312,7 +312,7 @@
                                 <div class="row">
                                     <div class="col-md-7 col-12">
                                         <p class="mb-3"><b>No trabajes más duro, trabaja más inteligente.</b> Enseñamos técnicas para optimizar el tiempo, organizar reuniones efectivas y cumplir con los objetivos propuestos.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/cursos/tiempo.jpg') }}" alt="">
@@ -331,7 +331,7 @@
                                 <div class="row">
                                     <div class="col-md-7 col-12">
                                         <p class="mb-3"><b>Del feedback al Feedforward.</b> Programa para manejar con éxito una comunicación asertiva con técnicas de feedback para permitirnos como equipo alcanzar un máximo compromiso enfocado a encontrar nuevas soluciones a los desafíos propuestos y llegar a objetivos de forma conjunta.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/cursos/feedback.jpg') }}" alt="">
@@ -350,7 +350,7 @@
                                 <div class="row">
                                     <div class="col-md-7 col-12">
                                         <p class="mb-3"><b>Estar bien en el trabajo, también es una necesidad.</b> Curso práctico - teórico intensivo acerca de las nuevas tendencias en gestión de equipos, mapeo del mercado laboral actual y análisis de casos de éxito.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/cursos/felicidad-org') }}.jpg" alt="">
@@ -394,7 +394,7 @@
                                 <div class="row">
                                     <div class="col-12 col-md-7">
                                         <p class="mb-3">Potenciamos el uso de la inteligencia colectiva para superar los desafíos en equipo. A través  de distintas pruebas se desarrolla la destreza, el trabajo en equipo, la toma de decisiones, el delegar, la cooperación y coordinación, la comunicación, el compartir y la creatividad.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/team/campeones.jpg') }}" alt="">
@@ -413,7 +413,7 @@
                                 <div class="row">
                                     <div class="col-12 col-md-7">
                                         <p class="mb-3">Mediante la incorporación y práctica de los principios básicos del golf se verá la perfecta analogía entre las funciones, actitudes y aptitud del liderazgo. En una serie de pruebas se vislumbra entre los miembros del equipo los distintos tipos de liderazgo, cómo trabajar en conjunto y cómo potenciarse para el bien grupal.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/team/swing.jpg') }}" alt="">
@@ -433,7 +433,7 @@
                                     <div class="col-12 col-md-7">
                                         <p class="mb-3">Una apasionante práctica con caballos lleva a los participantes a experimentar distintos niveles de confianza y respeto con uno mismo, hacia los compañeros y con el animal.
                                         Aumenta la seguridad, confianza y auto-motivación, logrando cohesión en el equipo para alcanzar unidad y seguridad.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/team/confianza.jpg') }}" alt="">
@@ -452,7 +452,7 @@
                                 <div class="row">
                                     <div class="col-12 col-md-7">
                                         <p class="mb-3">Para lograr alcanzar metas comunes es necesario el conocimiento de uno mismo, el control de las fuerzas propias y de las que nos rodean, el desarrollo de habilidades especiales de negociación y el compromiso del equipo.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/team/equipo.jpg') }}" alt="">
@@ -471,7 +471,7 @@
                                 <div class="row">
                                     <div class="col-12 col-md-7">
                                         <p class="mb-3">El Yoga es disciplina tradicional que trabaja sobre los 3 ejes del ser humano: físico, mental y espiritual. Mediante ejercicios que requieren un alto nivel de concentración, atención y cuidado, fomentamos el autoconocimiento y gestión de las emociones de las personas.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/team/yoga.jpg') }}" alt="">
@@ -490,7 +490,7 @@
                                 <div class="row">
                                     <div class="col-12 col-md-7">
                                         <p class="mb-3">Caminar por el mundo de la innovación, del futuro, de la creatividad y la experimentación, fallando rápido y barato, pero aprendiendo mucho más rápido. Ideal para equipos que necesitan generar nuevas ideas para desafíos habituales, o que quieren probar un nuevo producto o servicio.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/team/innovacion.jpg') }}" alt="">
@@ -526,7 +526,7 @@
                                 <div class="row">
                                     <div class="col-12 col-md-7">
                                         <p class="mb-3">Qué es lo que hace que el trabajo valga la ALEGRÍA de ser trabajado.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/workshops/fluir.jpg') }}" alt="">
@@ -545,7 +545,7 @@
                                 <div class="row">
                                     <div class="col-12 col-md-7">
                                         <p class="mb-3">Encontrando lo que te apasiona.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/workshops/pasion.jpg') }}" alt="">
@@ -564,7 +564,7 @@
                                 <div class="row">
                                     <div class="col-12 col-md-7">
                                         <p class="mb-3">Emprender desde la felicidad como modelo de negocios.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/workshops/happy.jpg') }}" alt="">
@@ -583,7 +583,7 @@
                                 <div class="row">
                                     <div class="col-12 col-md-7">
                                         <p class="mb-3">Nuevas Tendencias en Capital Humano y vPsicología Positiva Organizacional.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/workshops/felicidad.jpg') }}" alt="">
@@ -602,7 +602,7 @@
                                 <div class="row">
                                     <div class="col-12 col-md-7">
                                         <p class="mb-3">la importancia de integrar la diversidad en nuestra cultura, haciendo hincapié en el ámbito laboral.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/workshops/diversidad.jpg') }}" alt="">
@@ -621,7 +621,7 @@
                                 <div class="row">
                                     <div class="col-12 col-md-7">
                                         <p class="mb-3">Redefiniendo el sentido del éxito en los negocios.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/workshops/empresab.jpg') }}" alt="">
@@ -640,7 +640,7 @@
                                 <div class="row">
                                     <div class="col-12 col-md-7">
                                         <p class="mb-3">¿Cómo humanizar lo digital?.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/workshops/desafio.jpg') }}" alt="">
@@ -659,7 +659,7 @@
                                 <div class="row">
                                     <div class="col-12 col-md-7">
                                         <p class="mb-3">Cómo administrar mejor nuestros esfuerzos al trabajar.</p>
-                                        <a href="#contact" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/workshops/pequenos.jpg') }}" alt="">

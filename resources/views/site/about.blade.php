@@ -405,7 +405,7 @@
                         <h2 class="mb-3">Dónde estamos</h2>
                         <p>¡La felicidad es ilimitada! y brindamos asesoría a nivel global</p>
                         <h4 class="mb-3">Si estás en otro país</h4>
-                        <a href="#contact" class="btn-primary wow fadeInLeft" data-wow-delay="0.9s">INFORMAME</a>
+                        <a href="#contacto" class="btn-primary wow fadeInLeft" data-wow-delay="0.9s">INFORMAME</a>
                         <!-- <div class="line-shape"></div> -->
                     </div>
                 </div>
