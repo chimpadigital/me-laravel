@@ -17,7 +17,7 @@
                 <div class="col-12 col-md-4">
                     <div class="wellcome-heading wow fadeInLeft text-center text-md-left" data-wow-delay="0.7s">
                         <h2 class="mb-5">Consultora en Felicidad Organizacional</h2>
-                        <a href="#about" class="btn-primary wow fadeInLeft mt-5" data-wow-delay="0.9s">INFORMAME</a>
+                        <a href="#about1" class="btn-primary wow fadeInLeft mt-5" data-wow-delay="0.9s">INFORMAME</a>
                     </div>
                 </div>
                 <div class="col-12 col-md-2"></div>
@@ -33,7 +33,7 @@
                     <div class="col-12 col-md-6 text-center mt-5 mt-md-0">
                         <img src="{{ asset('img/core-img/me-eb.svg') }}" class="pl-5 pr-5 pr-md-0 pl-md-0" alt="">
                         <h3 class="text-white mt-5 mb-5">Promovemos la felicidad organizacional para potenciar tu marca empleadora</h3>
-                        <!-- <a href="#about" class="btn-primary">CONOCEME</a> -->
+                        
                     </div>
                     <div class="col-12 col-md-3"></div>
                 </div>
@@ -53,7 +53,7 @@
     <!-- ***** Wellcome Area End ***** -->
 
     <!-- ***** Special Area Start ***** -->
-    <section class="section_padding_100 bg-white" id="about">
+    <section class="section_padding_100 bg-white" id="about1">
         <div class="container">
             <div class="row">
                 <div class="col-12">

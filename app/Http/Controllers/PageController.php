@@ -8,6 +8,8 @@ use MercadoPago\SDK;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\EmailAdminInscription;
 use App\Mail\EmailUserInscription;
+use App\Mail\EmailAdminPendig;
+use App\Mail\EmailUSerPendig;
 use App\Mail\ContactMail;
 use App\Mail\EmailContactForm;
 use App;
@@ -169,7 +171,6 @@ class PageController extends Controller
 	
 	public function thanks(Request $request){
 
-		$request->input('merchant_order_id');
 		$event = Event::where('id',session('eventId'))->first();
 		
 		$session = session()->all();
@@ -193,9 +194,29 @@ class PageController extends Controller
 		return view('shoping.thanks')->with('nextEvents', $nextEvents);
 	}
 	
-	public function pending(){
-		$event = Event::where('id',session('event'))->first();
+	public function pending(Request $request){
+		
+		$session = session()->all();
+
+		$event = Event::where('id',session('eventId'))->first();
+
 		$nextEvents = App::call('App\Http\Controllers\EventsController@getNextEvents');
+
+		$id = $request->input('merchant_order_id');
+
+		if(app('config')->get('app.country') == 'ar')
+		{
+			$to = 'contamemas@meexperiencias.com';
+		}
+		if(app('config')->get('app.country') == 'cr')
+		{
+			$to = 'holacostarica@meexperiencias.com';
+		}
+
+
+		Mail::to($to)->send(new EmailAdminPendig($event,$session,$id));
+
+		Mail::to($session['email'])->send(new EmailUSerPendig($event,$session,$id));
 		
 		return view('shoping.process')->with('nextEvents', $nextEvents);
 	}
