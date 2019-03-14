@@ -34,6 +34,6 @@ class EmailUserInscription extends Mailable
      */
     public function build()
     {
-        return $this->view('mails.user_inscription');
+        return $this->subject('Datos de Inscripción')->view('mails.user_inscription');
     }
 }
