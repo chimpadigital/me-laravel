@@ -32,6 +32,6 @@ class EmailUserBank extends Mailable
      */
     public function build()
     {
-        return $this->view('mails.user_bank');
+        return $this->subject('')->view('mails.user_bank');
     }
 }

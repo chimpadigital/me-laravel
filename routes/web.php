@@ -70,7 +70,7 @@ Route::get('/cursos/payments','PaymentController@show')->name('events.payments')
 
 Route::post('/cursos/payments', 'PageController@payment')->name('events.payments.set');
 
-Route::post('/cursos/sendEmail', 'PageController@sendEmail');
+Route::post('/cursos/sendEmail', 'PageController@sendEmail')->name('send.email.contact');
 
 
 /*MercadoPago redirects*/

@@ -8,6 +8,7 @@ use MercadoPago\SDK;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\EmailAdminInscription;
 use App\Mail\EmailUserInscription;
+use App\Mail\ContactMail;
 use App\Mail\EmailContactForm;
 use App;
 
@@ -148,10 +149,6 @@ class PageController extends Controller
 		$msg = $request->message."\n\nNombre: ".$request->name."\nTeléfono: ".$request->phone."\nPaís: ".$request->country;
 		$msg = wordwrap($msg,70);
 		
-		$headers =  'MIME-Version: 1.0' . "\r\n"; 
-		$headers .= 'From: '.$request->email;
-		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-		
 		if(app('config')->get('app.country') == 'ar')
 		{
 			$to = 'sprados@chimpancedigital.com.ar';
@@ -161,7 +158,9 @@ class PageController extends Controller
 			$to = 'sprados@chimpancedigital.com.ar';
 		}
 
-		mail($to,"Contacto de ".$request->name." desde el formulario de la página web",$msg, $headers);
+		Mail::to($to)->send(new ContactMail($msg,$request));
+
+		//mail($to,"Contacto de ".$request->name." desde el formulario de la página web",$msg, $headers);
 		
 		session()->flash('successMail', 'Tu mensaje ha sido enviado');
 		

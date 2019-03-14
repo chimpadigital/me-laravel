@@ -7,22 +7,24 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class EmailAdminBank extends Mailable
+class ContactMail extends Mailable
 {
-    use Queueable, SerializesModels;
+    public $msg;
 
-    public $event;
-    public $session;
+    public $request;
+
+    use Queueable, SerializesModels;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($event,$session)
+    public function __construct($msg,$request)
     {
-        $this->event = $event;
-        $this->session = $session;
+        $this->msg = $msg;
+
+        $this->request = $request;
     }
 
     /**
@@ -32,6 +34,6 @@ class EmailAdminBank extends Mailable
      */
     public function build()
     {
-        return $this->subject('Nuevo usuario pre-regstrado')->view('mails.admin_bank');
+        return $this->subject("Contacto de ".$this->request->name." desde el formulario de la página web")->view('mails.contact');
     }
 }

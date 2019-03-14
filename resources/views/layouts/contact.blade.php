@@ -1,28 +1,7 @@
-@extends('layouts.site')
-
-@section('content')
-
-
-
-    <!-- ***** Wellcome Area Start ***** -->
-    <section class="wellcome_area clearfix bg-white position-relative" id="home">
-        <div class="container h-100 mt-7">
-            <div class="row h-100 align-items-center">
-                <div class="col-12 col-md-6 text-center text-lg-left">
-                    <div class="wellcome-heading wow fadeInLeft" data-wow-delay="0.7s">
-                        <h2>¡La felicidad es ilimitada!<br>Si estás en otro país</h2>
-                    </div>
-                    <a href="#contacto" class="btn-primary wow fadeInLeft" data-wow-delay="0.9s">ESCRIBIME</a>
-                </div>
-                <!-- <div class="col-12 col-md-1"></div> -->
-                <div class="col-12 col-md-6 wow fadeInDown" data-wow-delay="1s" style="z-index:1000;">
-                    <img src="img/ilustraciones/contacto.svg" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="special-area contacto wow fadeInUp" data-wow-delay="0.3s" id="contacto">
-            <div class="container">
-                <div class="row mt-7">
+ <!-- ***** Contact Us Area Start ***** -->
+    <section class="footer-contact-area section_padding_100 clearfix bg-white" id="contact">
+        <div class="container">
+            <div class="row">
                 
                 <div class="col-md-5">
                     <!-- Heading Text  -->
@@ -41,9 +20,9 @@
                     </div>
                     <div class="footer-social-icon">
                         <a href="https://www.facebook.com/MEExperiencias" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-<a href="https://twitter.com/meexperiencias" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-<a href="https://www.instagram.com/meexperiencias/" target="_blank"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
-<a href="https://www.linkedin.com/company/meexperiencias/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/meexperiencias" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/meexperiencias/" target="_blank"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/company/meexperiencias/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                     </div>
                     
                 </div>
@@ -64,6 +43,7 @@
                                     <!-- Single Input Area Start -->
                                     <div class="col-md-6">
                                         <div class="form-group">
+											
                                             <input type="text" class="form-control" name="name" id="name" placeholder="Nombre y Apellido" required>
                                         </div>
                                     </div>
@@ -342,18 +322,6 @@
                 </div>
                 
             </div>
-            </div>
-        </div>
-        <!-- Welcome thumb -->
-        <div class="welcome-thumb wow fadeInDown" data-wow-delay="0.4s">
-            <img src="img/ilustraciones/fondo-circulo.svg" alt="">
         </div>
     </section>
-    <!-- ***** Wellcome Area End ***** -->
-
-@endsection
-@section('section-scripts')
-<script type="text/javascript">
-    $('#contact').addClass('active-nuevo');
-</script>
-@endsection
+    <!-- ***** Contact Us Area End ***** -->    
