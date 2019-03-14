@@ -93,7 +93,7 @@
                         </ul>
                     </div> -->
 
-                    <div class="widget">
+                    <!-- <div class="widget">
                         <h4 class="mb-30">Categorías</h4>
                         <ul>
                             <li>
@@ -112,7 +112,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
