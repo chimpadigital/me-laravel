@@ -104,7 +104,7 @@
                                 <div class="row">
                                     <div class="col-12 col-md-7">
                                         <p class="mb-3">Acompañamiento en el análisis, formulación, evaluación y gestión de la estrategia organizacional para lograr los objetivos propuestos centrado en las personas.</p>
-                                        <a href="#contactoo" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/asesoria/estrategica.jpg') }}" alt="">
@@ -123,7 +123,7 @@
                                 <div class="row">
                                     <div class="col-12 col-md-7">
                                         <p class="mb-3">Asesoramiento contínuo sobre la planificación y ejecución de la comunicación efectiva entre los participantes dentro de la organización</p>
-                                        <a href="#contactoo" class="btn-primary btn-sm">INFORMAME</a>
+                                        <a href="#contacto" class="btn-primary btn-sm">INFORMAME</a>
                                     </div>
                                     <div class="col-md-5 col-12 mt-4 mt-lg-0">
                                         <img src="{{ asset('img/servicios/asesoria/comunicacion.jpg') }}" alt="">
