@@ -151,11 +151,11 @@ class PageController extends Controller
 		
 		if(app('config')->get('app.country') == 'ar')
 		{
-			$to = 'sprados@chimpancedigital.com.ar';
+			$to = 'contamemas@meexperiencias.com';
 		}
 		if(app('config')->get('app.country') == 'cr')
 		{
-			$to = 'sprados@chimpancedigital.com.ar';
+			$to = 'holacostarica@meexperiencias.com';
 		}
 
 		Mail::to($to)->send(new ContactMail($msg,$request));

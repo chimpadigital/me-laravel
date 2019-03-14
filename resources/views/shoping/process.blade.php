@@ -12,7 +12,7 @@
                         <div class="contact_input_area">
                             <div class="row">
                                 <div class="col-10">
-                                    <h3 class="mb-3">Ya casi</h3>
+                                    <h3 class="mb-3 color-amarillo">Ya casi</h3>
                                     <div class="wellcome-heading wow fadeInLeft" data-wow-delay="0.7s">
                                         <h2>Tu pago esta siendo procesesado</h2>
                                     </div>
