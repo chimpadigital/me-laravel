@@ -1803,7 +1803,7 @@ button:focus {
 .color-amarillo{color: #ECBB3C!important;}
 .icono-evento{height: 30px;}
 .info-evento li {margin-bottom: 20px}
-.evento li {list-style: outside;margin-left: 15px;}
+.evento li {list-style: outside;margin-left: 15px!important;}
 .precio {
     background: white;
     padding: 48px;

@@ -104,7 +104,7 @@
             </div>
         </div>
         <!-- Welcome thumb -->
-        <div class="welcome-thumb2 wow fadeInDown" data-wow-delay="0.4s">
+        <div class="welcome-thumb2">
             <img src="{{ asset('img/bg-img/evento-bg.svg') }}" alt="">
         </div>
     </section>
