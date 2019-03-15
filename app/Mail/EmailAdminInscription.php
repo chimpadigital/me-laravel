@@ -35,6 +35,6 @@ class EmailAdminInscription extends Mailable
      */
     public function build()
     {
-        return $this->subject('Nuevo Usuario Inscrito')->->view('mails.admin_inscription');
+        return $this->subject('Nuevo Usuario Inscrito')->view('mails.admin_inscription');
     }
 }

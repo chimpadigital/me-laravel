@@ -84,8 +84,9 @@ class InscriptionController extends Controller
 
         if ($request->input('method_payment') == 'mercado_pago') 
         {
-			SDK::setClientId("8522721791217541");
-			SDK::setClientSecret("1l4OLlePPmNTS8NPWCqottIKDFhKNh4k");
+            
+			SDK::setClientId(env('MP_CLIENT_ID'));
+			SDK::setClientSecret(env('MP_CLIENT_SECRET'));
 			
 			$preference = new \MercadoPago\Preference();
 			$item = new \MercadoPago\Item();
@@ -134,7 +135,7 @@ class InscriptionController extends Controller
             Mail::to($session['email'])->send(new EmailUserBank($event,$session));
 
             $nextEvents = App::call('App\Http\Controllers\EventsController@getNextEvents');
-            return view('shoping.thanks')->with('nextEvents', $nextEvents);
+            return view('shoping.thanks-bank')->with('nextEvents', $nextEvents);
 
         }
 
