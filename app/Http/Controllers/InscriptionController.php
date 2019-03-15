@@ -134,7 +134,7 @@ class InscriptionController extends Controller
             Mail::to($session['email'])->send(new EmailUserBank($event,$session));
 
             $nextEvents = App::call('App\Http\Controllers\EventsController@getNextEvents');
-            return view('shoping.thanks')->with('nextEvents', $nextEvents);
+            return view('shoping.thanks-bank')->with('nextEvents', $nextEvents);
 
         }
 
