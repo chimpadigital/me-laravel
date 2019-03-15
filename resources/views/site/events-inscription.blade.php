@@ -86,7 +86,7 @@
                 <div class="col-12 col-md-5 wow fadeInDown" data-wow-delay="1s" style="z-index:1000;">
                     <div class="precio">
                         <h3 class="">Costo</h3>
-                        <h1 class="mb-4">${{$event->price}}</h1>
+                        <h1 class="mb-4">@if(app('config')->get('app.country')=='ar')$ @endif {{ $event->price }} @if(app('config')->get('app.country')=='cr') USD @endif</h1>
                         
                         
                         <ul class="info-evento mt-5 wow fadeInLeft" data-wow-delay=".8s">

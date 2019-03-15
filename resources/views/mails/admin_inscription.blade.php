@@ -7,7 +7,7 @@
 <p>{{ session('email') }}</p>
 <p>{{ session('phone') }}</p>
 <p>{{ session('message') }}</p>
-<p>Monto de la transacción:{{ $event->price }}</p>
+<p>Monto de la transacción:@if(app('config')->get('app.country')=='ar')$ @endif {{ $event->price }} @if(app('config')->get('app.country')=='cr') USD @endif</p>
 <p>ID de la transacción:{{ $id }}</p>
 </body>
 </html>
