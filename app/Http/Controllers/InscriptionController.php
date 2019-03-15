@@ -84,8 +84,9 @@ class InscriptionController extends Controller
 
         if ($request->input('method_payment') == 'mercado_pago') 
         {
-			SDK::setClientId("8522721791217541");
-			SDK::setClientSecret("1l4OLlePPmNTS8NPWCqottIKDFhKNh4k");
+            
+			SDK::setClientId(env('MP_CLIENT_ID'));
+			SDK::setClientSecret(env('MP_CLIENT_SECRET'));
 			
 			$preference = new \MercadoPago\Preference();
 			$item = new \MercadoPago\Item();
