@@ -87,13 +87,22 @@ class InscriptionController extends Controller
             
 			SDK::setClientId(env('MP_CLIENT_ID'));
 			SDK::setClientSecret(env('MP_CLIENT_SECRET'));
+
+            if(app('config')->get('app.country') == 'ar')
+            {
+                $moneda = "ARS";
+            }else
+            {
+                $moneda = "USD";
+            }
+
 			
 			$preference = new \MercadoPago\Preference();
 			$item = new \MercadoPago\Item();
 			$item->id = $request->event;
 			$item->title = "Curso: ".$request->eventName;
 			$item->quantity = 1;
-			$item->currency_id = "ARS";
+			$item->currency_id = $moneda;
 			$item->unit_price = floatval($request->price);
 			$payer = new \MercadoPago\Payer();
 			$payer->email = $request->email;
