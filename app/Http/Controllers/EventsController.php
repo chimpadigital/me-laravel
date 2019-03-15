@@ -24,7 +24,7 @@ class EventsController extends Controller
 	
 	public function getNextEvents(){
 		$actualDate = date(('Y-m-d'));
-		$country = Country::where('code', session('country'))->get()->first();
+		$country = Country::where('code', app('config')->get('app.country'))->get()->first();
 		
 		$events = Event::where('country_id', $country->id)->where('date_start', '>=', $actualDate)->get();
 		
