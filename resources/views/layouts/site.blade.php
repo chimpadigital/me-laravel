@@ -103,7 +103,7 @@
             <!-- footer logo -->
             <div class="container">
                 <div class="row">
-                    <div class="col-1-5 col-md-2 mb-4 mb-md-0">
+                    <div class="col-md-3 mb-4 mb-md-0">
                         <img src="{{ asset('img/core-img/logo-footer.svg') }}" class="mb-3" alt="">
                         <p class="text-white">Somos especialistas en Felicidad Organizacional y nos apasiona trabajar con otros para crecer, aprender y actualizarnos</p>
                         <div class="footer-social-icon">
@@ -114,7 +114,7 @@
                         </div>
                     </div>
 					@if(session('country') == 'ar')
-						<div class="col-1-5 col-md-3 mb-4 mb-md-0">
+						<div class="col-md-3 mb-4 mb-md-0">
 							<div class="footer-heading">
 								<h3>Contacto</h3>
 							</div>
@@ -131,7 +131,7 @@
 						</div>
 					@endif
 					@if(session('country') == 'cr')
-						<div class="col-1-5 col-md-3 mb-4 mb-md-0">
+						<div class="col-md-3 mb-4 mb-md-0">
 							<div class="footer-heading">
 								<h3>Contacto</h3>
 							</div>
@@ -148,7 +148,7 @@
 							</div>
 						</div>
 					@endif
-                    <div class="col-1-5 col-md-2 mb-4 mb-md-0">
+                    <div class="col-md-3 mb-4 mb-md-0">
                         <div class="footer-heading">
                             <h3>Enlaces</h3>
                         </div>
@@ -161,7 +161,7 @@
                             <li class="mb-3"><a href="{{ asset('contact') }}">Contacto</a></li>
                         </ul>
                     </div>
-                    <div class="col-1-5 col-md-2 mb-4 mb-md-0">
+                    <div class="col-md-3 mb-4 mb-md-0">
                         <div class="footer-heading">
                             <h3>Servicios</h3>
                         </div>
@@ -172,9 +172,9 @@
                             <li class="mb-3"><a href="{{ route('service') }}#charlas">Charlas y conferencias</a></li>
                         </ul>
                     </div>
-                    <div class="col-1-5 col-md-3 mb-4 mb-md-0">
-                        <!-- <div class="fb-page" data-href="https://www.facebook.com/MEExperiencias/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-height="300" data-width=""data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/MEExperiencias/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/MEExperiencias/">ME Consultora en Felicidad Organizacional</a></blockquote></div> -->
-                    </div>
+                    <!-- <div class="col-1-5 col-md-3 mb-4 mb-md-0">
+                        <div class="fb-page" data-href="https://www.facebook.com/MEExperiencias/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-height="300" data-width=""data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/MEExperiencias/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/MEExperiencias/">ME Consultora en Felicidad Organizacional</a></blockquote></div>
+                    </div> -->
                 </div>
             </div>
             <!-- Foooter Text-->
