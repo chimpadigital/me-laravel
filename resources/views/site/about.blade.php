@@ -160,7 +160,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center ml-4 mr-4 ml-md-0 mr-md-0">
                 <div class="col-md-3 col-12">
                     <div class="single-team-member">
                         <div class="member-image text-center">
