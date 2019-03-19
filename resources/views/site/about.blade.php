@@ -17,7 +17,7 @@
         </div>
         <div class="bg-white planeta-bg position-relative" id="conoceme">
         <img src="img/bg-img/somos-top.svg" class="img-fluid somos-t w-100" alt="" >
-            <div class="somos wow fadeInUp somos position-relative" data-wow-delay="0.3s">
+            <div class="somos somos position-relative">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-md-3"></div>
