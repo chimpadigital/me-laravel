@@ -139,7 +139,7 @@
 
 						<div class="dropdown-menu">
 							<!--<div class="dropdown-header">Basic layouts</div>-->
-							<a href="{{ route('events.create') }}" class="dropdown-item"><i class="icon-file-plus"></i> Nueva curso</a>
+							<a href="{{ route('events.create') }}" class="dropdown-item"><i class="icon-file-plus"></i> Nuevo curso</a>
 
 							<a href="{{ route('events.index') }}" class="dropdown-item"><i class="icon-file-spreadsheet"></i> Listar cursos</a>
 
