@@ -26,9 +26,9 @@
 
 <body>
     <!-- Preloader Start -->
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div class="colorlib-load"></div>
-    </div>
+    </div> -->
 
     <!-- Facebook widget -->
     <div id="fb-root"></div>

@@ -75,13 +75,13 @@
 				@php
 					$userAuth = Auth::user();
 				@endphp
-				<li class="nav-item dropdown">
+				<!-- <li class="nav-item dropdown">
 					<a href="" class="navbar-nav-link legitRipple" title="Tiene nuevas notificaciones">
 						<i class="icon-bell2"></i>
 						<span class="d-xl-none ml-2">Notificaciones</span>
 						<span class="badge badge-mark border-pink ml-auto ml-md-0"></span>
 					</a>					
-				</li>
+				</li> -->
 				<li class="nav-item dropdown dropdown-user">
 					<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
 						<img src="
@@ -96,9 +96,9 @@
 					
 
 					<div class="dropdown-menu dropdown-menu-right">
-						<a href="#" class="dropdown-item"><i class="icon-user-plus"></i> Mi perfil</a>
+						<!-- <a href="#" class="dropdown-item"><i class="icon-user-plus"></i> Mi perfil</a>
 						
-						<div class="dropdown-divider"></div>
+						<div class="dropdown-divider"></div> -->
 
 						<a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="icon-exit3"></i> Finalizar</a>
 						<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -177,7 +177,7 @@
 
 
 	<!-- Footer -->
-	<div class="navbar navbar-expand-lg navbar-light">
+	<!-- <div class="navbar navbar-expand-lg navbar-light">
 		
 
 			<ul class="navbar-nav ml-lg-auto">
@@ -185,7 +185,7 @@
 				
 			</ul>
 		</div>
-	</div>
+	</div> -->
 	<!-- /footer -->
 	@yield('scripts')
 </body>
