@@ -231,7 +231,7 @@
                             <h2 class="mb-4">Nuestro día a día</h2>
 
                            <!-- LightWidget WIDGET -->
-                           <script src="http://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="http://lightwidget.com/widgets/477991bad43b5dbf836075eeb09a7379.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+                           <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="https://lightwidget.com/widgets/477991bad43b5dbf836075eeb09a7379.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
 
 
 
