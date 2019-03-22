@@ -24,6 +24,15 @@ Route::get('/locale','PageController@locale');
 
 Auth::routes();
 
+Route::get('/register', function () {
+    return redirect()->route('/');
+})->name('register');
+
+Route::post('/register', function () {
+    return redirect()->route('/');
+})->name('register');
+
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware'=>['auth']],function(){
@@ -36,6 +45,27 @@ Route::group(['middleware'=>['auth']],function(){
 		'update'=>'events.update',
 		'destroy'=>'events.destroy',
 	]);
+
+	Route::resource('/administrar-blog','PostController')->names([
+		'index'=>'admin.post.index',
+		'show'=>'admin.post.show',
+		'create'=>'admin.post.create',
+		'store'=>'admin.post.store',
+		'update'=>'admin.post.update',
+		'edit'=>'admin.post.edit',
+		'destroy'=>'admin.post.destroy',
+	]);
+
+	Route::resource('/administrar-categorias','CategoryController')->names([
+		'index'=>'admin.category.index',
+		'create'=>'admin.category.create',
+		'store'=>'admin.category.store',
+		'update'=>'admin.category.update',
+		'edit'=>'admin.category.edit',
+		'destroy'=>'admin.category.destroy',
+	]);
+
+	Route::post('upload-img-ajax','PostController@ajaxImg')->name('img.store');
 
 });
 

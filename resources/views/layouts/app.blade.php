@@ -131,20 +131,50 @@
 					</a>
 				</li>
 				
-					<li class="nav-item dropdown">
-						<a href="#" class="navbar-nav-link dropdown-toggle legitRipple" data-toggle="dropdown">
-							<i class="icon-users mr-2"></i>
-							Cursos 
-						</a>
+				<li class="nav-item dropdown">
+					<a href="#" class="navbar-nav-link dropdown-toggle legitRipple" data-toggle="dropdown">
+						<i class="icon-users mr-2"></i>
+						Cursos 
+					</a>
 
-						<div class="dropdown-menu">
-							<!--<div class="dropdown-header">Basic layouts</div>-->
-							<a href="{{ route('events.create') }}" class="dropdown-item"><i class="icon-file-plus"></i> Nuevo curso</a>
+					<div class="dropdown-menu">
+						<!--<div class="dropdown-header">Basic layouts</div>-->
+						<a href="{{ route('events.create') }}" class="dropdown-item"><i class="icon-file-plus"></i> Nuevo curso</a>
 
-							<a href="{{ route('events.index') }}" class="dropdown-item"><i class="icon-file-spreadsheet"></i> Listar cursos</a>
+						<a href="{{ route('events.index') }}" class="dropdown-item"><i class="icon-file-spreadsheet"></i> Listar cursos</a>
 
-						</div>
-					</li>
+					</div>
+				</li>
+
+				<li class="nav-item dropdown">
+					<a href="#" class="navbar-nav-link dropdown-toggle legitRipple" data-toggle="dropdown">
+						<i class="icon-blogger mr-2"></i>
+						Blog 
+					</a>
+
+					<div class="dropdown-menu">
+						<!--<div class="dropdown-header">Basic layouts</div>-->
+						<a href="{{ route('admin.post.create') }}" class="dropdown-item"><i class="icon-file-plus"></i> Nuevo post</a>
+
+						<a href="{{ route('admin.post.index') }}" class="dropdown-item"><i class="icon-file-spreadsheet"></i> Listar posts</a>
+
+					</div>
+				</li>
+
+				<li class="nav-item dropdown">
+					<a href="#" class="navbar-nav-link dropdown-toggle legitRipple" data-toggle="dropdown">
+						<i class="icon-list mr-2"></i>
+						Categorias 
+					</a>
+
+					<div class="dropdown-menu">
+						<!--<div class="dropdown-header">Basic layouts</div>-->
+						<a href="{{ route('admin.category.create') }}" class="dropdown-item"><i class="icon-file-plus"></i> Nueva Categoria</a>
+
+						<a href="{{ route('admin.category.index') }}" class="dropdown-item"><i class="icon-file-spreadsheet"></i> Listar Categorias</a>
+
+					</div>
+				</li>
 			</ul>
 		</div>
 	</div>
