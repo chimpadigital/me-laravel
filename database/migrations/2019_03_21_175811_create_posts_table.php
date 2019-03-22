@@ -24,11 +24,11 @@ class CreatePostsTable extends Migration
 
             $table->string('cover_image');
 
-            $table->integer('category_id')->unsigned()->nullable();
+            $table->integer('category_id')->unsigned();
 
             $table->foreign('category_id')->references('id')->on('categories');
 
-            $table->integer('country_id')->unsigned();
+            $table->integer('country_id')->unsigned()->nullable();
 
             $table->foreign('country_id')->references('id')->on('countries');
 

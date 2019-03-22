@@ -36,7 +36,7 @@
 									<ul class="list-inline list-inline-dotted text-muted mb-3">
 										<li class="list-inline-item">Categoria: <a href="#" class="text-muted">{{ $post->category->name }}</a></li>
 
-										<li class="list-inline-item">Pais: <a href="#" class="text-muted">{{ $post->country->name }}</a></li>
+										<li class="list-inline-item">Pais: <a href="#" class="text-muted">{{ is_null($post->country_id) ?  "Todos los paises" : $post->country->name  }}</a></li>
 
 										<li class="list-inline-item">{{ date('d-m-Y',strtotime($post->created_at)) }}</li>										
 									</ul>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Event;
+use App\Post;
+use App\Country;
 use MercadoPago\SDK;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\EmailAdminInscription;
@@ -226,5 +228,33 @@ class PageController extends Controller
 		$event = Event::where('id',session('eventId'))->first();
 		return view('site.events-inscription')->with('event', $event)->with('error', 'Hubo un problema al procesar tu pago, por favor selecciona otro metodo de pago o reintenta mas tarde')->with('nextEvents', $nextEvents);
 	}
+
+
+	public function blogIndex()
+	{
+		$country = Country::where('code',app('config')->get('app.country'))->first();
+
+		$posts = Post::whereNull('country_id')->orWhereIn('country_id', array($country->id))->get();
+
+		//dd($post);
+		return view('blog.index',[
+			'posts'=>$posts,
+		]);
+	}
+
+	public function blogShow($id)
+	{
+		$post = Post::where('id',$id)->first();
+		
+		if (!$post) 
+		{
+			return about(404);
+		}
+		
+		return view('blog.example_note',[
+			'post'=>$post,
+		]);
+	}
+
 
 }

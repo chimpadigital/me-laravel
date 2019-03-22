@@ -50,13 +50,14 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+
         $request->validate([
             'name'=>'required|string',
             'description'=>'required|string',
             'summary'=>'required|string',
             'img'=>'required|file',
             'category'=>'required|numeric|exists:categories,id',
-            'country'=>'required|numeric|exists:countries,id',
+            'country'=>'nullable|numeric|exists:countries,id',
         ]);
 
         $post = Post::create([

@@ -69,13 +69,9 @@ Route::group(['middleware'=>['auth']],function(){
 
 });
 
-Route::get('/blog', function(){
-	return view('blog.index');
-})->name('blog');
+Route::get('/blog', 'PageController@blogIndex' )->name('blog');
 
-Route::get('blog/notes', function(){
-	return view('blog.example_note');
-})->name('notes');
+Route::get('blog/notes/{id}', 'PageController@blogShow')->name('notes');
 
 Route::get('/nosotras', function(){
 	return view('site.about');
