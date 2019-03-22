@@ -113,7 +113,7 @@
                             <a href="https://www.linkedin.com/company/meexperiencias/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                         </div>
                     </div>
-					@if(session('country') == 'ar')
+					@if(app('config')->get('app.country') == 'ar')
 						<div class="col-md-3 mb-4 mb-md-0">
 							<div class="footer-heading">
 								<h3>Contacto</h3>
@@ -130,7 +130,7 @@
 							</div>
 						</div>
 					@endif
-					@if(session('country') == 'cr')
+					@if(app('config')->get('app.country') == 'cr')
 						<div class="col-md-3 mb-4 mb-md-0">
 							<div class="footer-heading">
 								<h3>Contacto</h3>
