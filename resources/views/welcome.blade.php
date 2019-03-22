@@ -115,7 +115,7 @@
     <!-- ***** Special Area End ***** -->
     
     <!-- ***** Client Feedback Area Start ***** -->
-	@if(session('country') == 'ar')
+	@if(app('config')->get('app.country') == 'ar')
 		<section class="clients-feedback-area bg-white section_padding_100 clearfix" id="testimonials">
 			<div class="container">
 				<div class="row justify-content-center">
@@ -182,7 +182,7 @@
 			</div>
 		</section>
 	@endif
-	@if(session('country') == 'cr')
+	@if(app('config')->get('app.country') == 'cr')
 		<section class="clients-feedback-area bg-white section_padding_100 clearfix" id="testimonials">
 			<div class="container">
 				<div class="row justify-content-center">
