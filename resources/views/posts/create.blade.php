@@ -67,8 +67,7 @@
 				
 						<label for="">Categoria:</label>
 					
-						<select class="form-control" name="category" required>
-							
+						<select class="form-control" name="category" required>								
 							@forelse($categories as $category)
 								<option value="{{ $category->id }}">{{ $category->name }}</option>
 							@empty
@@ -100,8 +99,8 @@
 				
 						<label for="">Pais:</label>
 					
-						<select class="form-control" name="country" required>
-							
+						<select class="form-control" name="country">
+							<option value="">Todos los paises</option>
 							@forelse($countries as $country)
 								<option value="{{ $country->id }}">{{ $country->name }}</option>
 							@empty

@@ -34,6 +34,10 @@ class ContactMail extends Mailable
      */
     public function build()
     {
-        return $this->subject("Contacto de ".$this->request->name." desde el formulario de la página web")->from($this->request->email)->view('mails.contact');
+        
+        
+        return $this->from($this->request->email)
+                    ->subject("Contacto de ".$this->request->name." desde el formulario de la página web")
+                    ->view('mails.contact');
     }
 }

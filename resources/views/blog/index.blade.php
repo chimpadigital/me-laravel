@@ -42,23 +42,30 @@
             
             <div class="row">
                 <!-- Single Special Area -->
+                
                 <div class="col-12 col-md-8">
                     <div class="row">
+                        @forelse($posts as $post)
                         <div class="col-12 col-md-6">
                             <div class="blog-post wow fadeInUp" data-wow-delay="0.2s">
                                 <div class="blog-image">
-                                    <img src="img/blog/blog1.jpg" alt="">
+                                    <img src="{{ Storage::disk('public')->url($post->cover_image) }}" alt="">
                                 </div>
                                 <div class="blog-content">
-                                    <h5 class="mb-4">¡¡Preparate para llevar tu 2019 al siguiente nivel!!</h5>
-                                    <p class="mb-5">A lo largo de noviembre y diciembre estamos desarrollando los Cursos Impulso 2018 con el objetivo de brindar herramientas, al público en general, para que puedan dar un ..</p>
-                                    <a href="blog/notes" class="btn-primary btn-sm">VER NOTA</a>
+                                    <h5 class="mb-4">{{ $post->name }}</h5>
+                                    <p class="mb-5">{{ $post->summary }}</p>
+                                    <a href="{{ route('notes',$post->id) }}" class="btn-primary btn-sm">VER NOTA</a>
                                 </div>
                             </div>
                         </div>
+                        @empty
+
+                        @endforelse
 
                     </div>
                 </div>
+               
+
                 <!-- Single Special Area -->
                 <div class="col-12 col-md-4 sidebar-blog bg-white">
                     <div class="widget">
