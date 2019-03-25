@@ -21,7 +21,7 @@ Route::get('/bienvenido', function () {
     return view('welcome')->with('events', $events);
 })->name('welcome');
 
-Route::get('/locale',function(Request $request){
+Route::get('/country',function(Request $request){
 	
 	session()->put('country',$request->input('country'));
 
