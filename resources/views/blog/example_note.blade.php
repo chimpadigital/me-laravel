@@ -15,7 +15,7 @@
                 <div class="col-12 col-lg-8">
                     <div class="mb-4 wow fadeInLeft mt-150" data-wow-delay="0.7s">
                         <h2 class="text-warning mb-3">{{ $post->name }}</h2>
-                        <i class="text-warning fa fa-calendar float-left mr-2"></i> <p class="text-warning">12/12/2018</p>
+                        <i class="text-warning fa fa-calendar float-left mr-2"></i> <p class="text-warning">{{ date('d/m/Y',strtotime($post->created_at)) }}</p>
                     </div>
                 </div>
             </div>
@@ -38,21 +38,10 @@
                     <div class="widget">
                         <h4 class="mb-30">Últimas Noticias</h4>
                         <ul>
-                            <li>
-                                <div class="thumb-img float-left mr-4">
-                                    <img src="../img/blog/blog1.jpg" alt="">
-                                </div>
-                                <a href="/prepara-tu-2019.php">
-
-                                </a>
-                                <h6>¡¡Preparate para llevar tu 2019 al siguiente nivel!!</h6>
-                                <p>fecha</p>
-                            </li>
+                            @include('blog.latest-news')
                         </ul>
                     </div>
-                    <div class="widget">
-                        <div class="fb-share-button" data-href="{{ route('notes',$post->id) }}" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
-                    </div>
+                    
 <!-- 
                     <div class="widget">
                         <h4 class="mb-30">Archivo</h4>
@@ -103,8 +92,20 @@
     </section>
     <!-- ***** Wellcome Area End ***** -->
     <section>
+
+        <div class="container">
+            <div class="widget">
+                <div class="fb-share-button" data-href="{{ route('notes',$post->id) }}" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
+            </div>
+        </div>
+
         
-        <div data-width="100%" class="fb-comments" data-href="{{ route('notes',$post->id) }}" data-numposts="5"></div>
+        <div class="container">
+
+            <div data-width="100%" class="fb-comments" data-href="{{ route('notes',$post->id) }}" data-numposts="5"></div>
+
+        </div>
+        
 
     </section>
 

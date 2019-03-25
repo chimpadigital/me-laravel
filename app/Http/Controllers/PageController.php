@@ -234,7 +234,7 @@ class PageController extends Controller
 	{
 		$country = Country::where('code',app('config')->get('app.country'))->first();
 
-		$posts = Post::whereNull('country_id')->orWhereIn('country_id', array($country->id))->get();
+		$posts = Post::whereNull('country_id')->orWhereIn('country_id', array($country->id))->latest()->paginate(25);
 
 		//dd($post);
 		return view('blog.index',[
@@ -256,5 +256,15 @@ class PageController extends Controller
 		]);
 	}
 
+	public function latestPosts()
+    {
+    	$country = Country::where('code',app('config')->get('app.country'))->first();
+
+		$latestPosts = Post::whereNull('country_id')->orWhereIn('country_id', array($country->id))->latest()->paginate(3);
+
+		return $latestPosts;
+
+         
+    }
 
 }
