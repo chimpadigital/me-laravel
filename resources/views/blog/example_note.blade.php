@@ -41,6 +41,15 @@
                             @include('blog.latest-news')
                         </ul>
                     </div>
+
+                    <div class="widget">
+                        
+                        <h4 class="mb-30">Categorias</h4>
+                        <ul>
+                            @include('blog.latest-news')
+                        </ul>
+
+                    </div>
                     
 <!-- 
                     <div class="widget">
