@@ -57,8 +57,18 @@ class PostController extends Controller
             'summary'=>'required|string',
             'img'=>'required|file',
             'category'=>'required|numeric|exists:categories,id',
-            'country'=>'nullable|numeric|exists:countries,id',
+            'country'=>'numeric|exists:countries,id',
         ]);
+
+        $country_post = $request->input('country');
+
+        if (is_null($request->input('country'))) 
+        {
+            $all_countries = Country::where('code','all_countries')->first();
+            $country_post = $all_countries->id;
+        }
+
+        
 
         $post = Post::create([
             'name'=>$request->input('name'),
@@ -66,7 +76,7 @@ class PostController extends Controller
             'summary'=>$request->input('summary'),
             'cover_image'=>$request->file('img')->store('cover_img_post','public'),
             'category_id'=>$request->input('category'),
-            'country_id'=>$request->input('country'),
+            'country_id'=>$country_post,
         ]);
 
         return redirect()->route('admin.post.index')->with('success','Post creado con Exito');
@@ -136,6 +146,15 @@ class PostController extends Controller
             'country'=>'required|numeric|exists:countries,id',
         ]);
 
+        $country_post = $request->input('country');
+
+        if (is_null($request->input('country'))) 
+        {
+            $all_countries = Country::where('code','all_countries')->first();
+            $country_post = $all_countries->id;
+        }
+
+
         $post = Post::where('id',$id)->first();
 
         $this->cover_image = $post->cover_image;
@@ -156,7 +175,7 @@ class PostController extends Controller
             'summary'=>$request->input('summary'),
             'cover_image'=>$this->cover_image,
             'category_id'=>$request->input('category'),
-            'country_id'=>$request->input('country'),
+            'country_id'=>$country_post,
         ]);
 
         return redirect()->route('admin.post.show',$post->id)->with('success','Post actualizado con exito!');

@@ -27,7 +27,7 @@ class Post extends Model
     {
         if ($id) 
         {
-            return $query->where('category_id', $id);
+            return $query->where('category_id',$id);
         }
             
     }

@@ -239,10 +239,15 @@ class PageController extends Controller
 		]);
 
 		$country = Country::where('code',app('config')->get('app.country'))->first();
+		
+		$countriall = Country::where('code',"all_countries")->first();
 
-		$posts = Post::categoryFilter($request->input('category'))->where('country_id', $country->id)->orWhereNull('country_id')->latest()->paginate(25);
+		$posts = Post::categoryFilter($request->input('category'))
+		               ->whereIn('country_id',array($country->id,$countriall->id))
+		               ->latest()
+		               ->paginate(25);
 
-		//dd($post);
+		//dd($posts);
 		return view('blog.index',[
 			'posts'=>$posts,
 		]);

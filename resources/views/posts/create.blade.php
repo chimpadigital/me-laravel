@@ -100,7 +100,6 @@
 						<label for="">Pais:</label>
 					
 						<select class="form-control" name="country">
-							<option value="">Todos los paises</option>
 							@forelse($countries as $country)
 								<option value="{{ $country->id }}">{{ $country->name }}</option>
 							@empty

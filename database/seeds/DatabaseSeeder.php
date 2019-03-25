@@ -14,6 +14,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Country::create([
+            'name'=>'Todos los paises',
+            'code'=>'all_countries',
+        ]);
+
+        Country::create([
             'name'=>'Argentina',
             'code'=>'ar',
         ]);
@@ -22,6 +27,7 @@ class DatabaseSeeder extends Seeder
             'name'=>'Costa Rica',
             'code'=>'cr',
         ]);
+        
         // $this->call(UsersTableSeeder::class);
         User::create([
 	        'name' => 'admin',
