@@ -23,9 +23,7 @@ Route::get('/bienvenido', function () {
 
 Route::get('/country',function(Request $request){
 	
-	session()->put('country',$request->input('country'));
-
-    return redirect()->route('welcome');
+    return redirect()->route('welcome')->withCookie(cookie()->forever('country',$request->input('country')));
 });
 
 Auth::routes();
