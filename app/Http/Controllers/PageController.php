@@ -21,11 +21,7 @@ class PageController extends Controller
 {
     public function locale(Request $request)
     {
-    	if (session('country')) 
-    	{
-    		session()->forget('country');	
-    	}
-
+  
     	session()->put('country',$request->input('country'));
 
     	return redirect()->route('welcome');
