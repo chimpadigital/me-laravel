@@ -48,10 +48,10 @@
                 </div>
                 <div class="col-12 col-md-7 position-relative h100" >
                     <div class="get-start-area float-lg-right">
-                        <a href="{{ route('country') }}?country=ar" class="btn btn-pais d-block mb-4 boton-celular">
+                        <a href="{{ route('country','ar') }}" class="btn btn-pais d-block mb-4 boton-celular">
                             Argentina <img src="{{ asset('img/core-img/arg.png') }}" class="ml-3 w-25 " alt="Argentina">
                         </a>
-                        <a href="{{ route('country') }}?country=cr" class="btn btn-pais btn-pais-2 d-block">
+                        <a href="{{ route('country','cr') }}" class="btn btn-pais btn-pais-2 d-block">
                             Costa Rica <img src="{{ asset('img/core-img/cr.png') }}" class="ml-3 w-25" alt="Argentina">
                         </a>
 

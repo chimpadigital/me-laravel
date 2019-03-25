@@ -21,9 +21,9 @@ Route::get('/bienvenido', function () {
     return view('welcome')->with('events', $events);
 })->name('welcome');
 
-Route::get('/pais',function(Request $request){
+Route::get('/country-change/{code}',function(Request $request,$code){
 	
-    return redirect()->route('welcome')->withCookie(cookie()->forever('country',$request->input('country')));
+    return redirect()->route('welcome')->withCookie(cookie()->forever('country',$code));
 })->name('country');
 
 Auth::routes();
