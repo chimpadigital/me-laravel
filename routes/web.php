@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +21,12 @@ Route::get('/bienvenido', function () {
     return view('welcome')->with('events', $events);
 })->name('welcome');
 
-Route::get('/locale','PageController@locale');
+Route::get('/locale',function(Request $request){
+	
+	session()->put('country',$request->input('country'));
+
+    return redirect()->route('welcome');
+});
 
 Auth::routes();
 
