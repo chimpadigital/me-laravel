@@ -22,4 +22,13 @@ class Post extends Model
     {
     	return $this->belongsTo(Country::class);
     }
+
+    public function scopeCategoryFilter($query,$id)
+    {
+        if ($id) 
+        {
+            return $query->where('category_id', $id);
+        }
+            
+    }
 }

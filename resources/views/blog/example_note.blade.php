@@ -41,16 +41,9 @@
                             @include('blog.latest-news')
                         </ul>
                     </div>
-
-                    <div class="widget">
-                        
-                        <h4 class="mb-30">Categorias</h4>
-                        <ul>
-                            @include('blog.latest-news')
-                        </ul>
-
-                    </div>
                     
+                    @include('blog.categories')
+
 <!-- 
                     <div class="widget">
                         <h4 class="mb-30">Archivo</h4>
@@ -71,28 +64,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </div> -->
-
-                    <!-- <div class="widget">
-                        <h4 class="mb-30">Categorías</h4>
-                        <ul>
-                            <li>
-                                <a href="">
-                                    <p>Charlas</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <p>Innovación</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <p>Capacitaciones</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </div> -->
+                    </div> -->                     
 
                 </div>
             </div>
@@ -100,7 +72,7 @@
         
     </section>
     <!-- ***** Wellcome Area End ***** -->
-    <section>
+    <section class="bg-white">
 
         <div class="container">
             <div class="widget">

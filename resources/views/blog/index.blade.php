@@ -77,6 +77,8 @@
                             @include('blog.latest-news')
                         </ul>
                     </div>
+
+                    @include('blog.categories')
 <!-- 
                     <div class="widget">
                         <h4 class="mb-30">Archivo</h4>

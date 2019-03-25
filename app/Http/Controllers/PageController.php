@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Event;
 use App\Post;
 use App\Country;
+use App\Category;
 use MercadoPago\SDK;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\EmailAdminInscription;
@@ -231,11 +232,15 @@ class PageController extends Controller
 	}
 
 
-	public function blogIndex()
+	public function blogIndex(Request $request)
 	{
+		$request->validate([
+			'category'=>'exists:categories,id|nullable',
+		]);
+
 		$country = Country::where('code',app('config')->get('app.country'))->first();
 
-		$posts = Post::whereNull('country_id')->orWhereIn('country_id', array($country->id))->latest()->paginate(25);
+		$posts = Post::categoryFilter($request->input('category'))->where('country_id', $country->id)->orWhereNull('country_id')->latest()->paginate(25);
 
 		//dd($post);
 		return view('blog.index',[
@@ -266,6 +271,13 @@ class PageController extends Controller
 		return $latestPosts;
 
          
+    }
+
+    public function categories()
+    {
+    	$categories = Category::all();
+
+    	return $categories;
     }
 
 }
