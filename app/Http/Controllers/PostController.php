@@ -198,4 +198,6 @@ class PostController extends Controller
 
         return \Response::json(asset('storage/'.$url),200);
     }
+
+    
 }

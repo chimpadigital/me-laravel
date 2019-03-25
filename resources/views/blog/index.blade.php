@@ -71,15 +71,7 @@
                     <div class="widget">
                         <h4 class="mb-30">Últimas Noticias</h4>
                         <ul>
-                            <li>
-                                <div class="thumb-img float-left mr-4 mb-3">
-                                    <img src="img/blog/blog1.jpg" alt="">
-                                </div>
-                                <a href="blog/notes">
-                                    <h6>¡¡Preparate para llevar tu 2019 al siguiente nivel!!</h6>
-                                </a>
-                                <p>13/03/2019</p>
-                            </li>
+                            @include('blog.latest-news')
                         </ul>
                     </div>
 <!-- 
