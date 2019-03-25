@@ -21,10 +21,10 @@ Route::get('/bienvenido', function () {
     return view('welcome')->with('events', $events);
 })->name('welcome');
 
-Route::get('/country',function(Request $request){
+Route::get('/pais',function(Request $request){
 	
     return redirect()->route('welcome')->withCookie(cookie()->forever('country',$request->input('country')));
-});
+})->name('country');
 
 Auth::routes();
 
