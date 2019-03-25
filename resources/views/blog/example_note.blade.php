@@ -72,7 +72,7 @@
         
     </section>
     <!-- ***** Wellcome Area End ***** -->
-    <section class="bg-white">
+    <section class="bg-white pb-5">
 
         <div class="container">
             <div class="widget">

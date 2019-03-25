@@ -270,8 +270,10 @@ class PageController extends Controller
 	public function latestPosts()
     {
     	$country = Country::where('code',app('config')->get('app.country'))->first();
+		
+		$countriall = Country::where('code',"all_countries")->first();
 
-		$latestPosts = Post::whereNull('country_id')->orWhereIn('country_id', array($country->id))->latest()->paginate(3);
+		$latestPosts = Post::whereIn('country_id',array($country->id,$countriall->id))->latest()->paginate(3);
 
 		return $latestPosts;
 
