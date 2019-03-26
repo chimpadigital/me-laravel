@@ -178,12 +178,12 @@ ul,
 ol {
     margin: 0;
     padding: 0;
-    color: #726a84;
+    color: #4D4D4D;
 }
 .nav-item .nav-link span {
     color: #ECBB3C;
 }
-span{color: #726a84;font-size: 15px!important;}
+span{color: #4D4D4D;font-size: 15px!important;}
 
 #scrollUp {
     bottom: 0;
@@ -212,7 +212,7 @@ li {
 }
 
 p {
-    color: #726a84;
+    color: #4D4D4D;
     font-size:15px;
     font-weight: 300;
     margin-top: 0;
