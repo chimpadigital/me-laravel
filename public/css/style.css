@@ -180,7 +180,9 @@ ol {
     padding: 0;
     color: #726a84;
 }
-
+.nav-item .nav-link span {
+    color: #ECBB3C;
+}
 span{color: #726a84;}
 
 #scrollUp {
