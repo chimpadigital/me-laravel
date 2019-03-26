@@ -8,7 +8,8 @@
             <div class="row h-100 align-items-center">
                 <div class="col-12 col-md-4 mt-100 mt-lg-0 text-center text-lg-left">
                     <div class="wellcome-heading wow fadeInLeft" data-wow-delay="0.7s">
-                        <h2>Novedades, charlas y más</h2>
+                        <h4>Categoría:</h4>    
+                        <h2>{{ $category->name }}</h2>
                     </div>
                     <a href="#posts" class="btn-primary wow fadeInLeft" data-wow-delay="0.9s">ENTERARME</a>
                 </div>
