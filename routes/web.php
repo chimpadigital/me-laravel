@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +21,10 @@ Route::get('/bienvenido', function () {
     return view('welcome')->with('events', $events);
 })->name('welcome');
 
-Route::get('/locale','PageController@locale');
+Route::get('/change-country/{code}',function(Request $request,$code){
+	
+    return redirect()->route('welcome')->withCookie(cookie()->forever('country',$code));
+})->name('country');
 
 Auth::routes();
 

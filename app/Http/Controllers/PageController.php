@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Event;
 use App\Post;
 use App\Country;
+use App\Category;
 use MercadoPago\SDK;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\EmailAdminInscription;
@@ -21,6 +22,7 @@ class PageController extends Controller
 {
     public function locale(Request $request)
     {
+  
     	session()->put('country',$request->input('country'));
 
     	return redirect()->route('welcome');
@@ -230,13 +232,22 @@ class PageController extends Controller
 	}
 
 
-	public function blogIndex()
+	public function blogIndex(Request $request)
 	{
+		$request->validate([
+			'category'=>'exists:categories,id|nullable',
+		]);
+
 		$country = Country::where('code',app('config')->get('app.country'))->first();
+		
+		$countriall = Country::where('code',"all_countries")->first();
 
-		$posts = Post::whereNull('country_id')->orWhereIn('country_id', array($country->id))->latest()->paginate(25);
+		$posts = Post::categoryFilter($request->input('category'))
+		               ->whereIn('country_id',array($country->id,$countriall->id))
+		               ->latest()
+		               ->paginate(25);
 
-		//dd($post);
+		//dd($posts);
 		return view('blog.index',[
 			'posts'=>$posts,
 		]);
@@ -259,12 +270,21 @@ class PageController extends Controller
 	public function latestPosts()
     {
     	$country = Country::where('code',app('config')->get('app.country'))->first();
+		
+		$countriall = Country::where('code',"all_countries")->first();
 
-		$latestPosts = Post::whereNull('country_id')->orWhereIn('country_id', array($country->id))->latest()->paginate(3);
+		$latestPosts = Post::whereIn('country_id',array($country->id,$countriall->id))->latest()->paginate(3);
 
 		return $latestPosts;
 
          
+    }
+
+    public function categories()
+    {
+    	$categories = Category::all();
+
+    	return $categories;
     }
 
 }

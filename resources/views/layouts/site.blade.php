@@ -69,17 +69,17 @@
                                     </div>
                                     <li class="nav-item dropdown">
                                         @if(app('config')->get('app.country') == 'ar')
-                                            <a class="nav-link dropdown-toggle" href="/locale?country=ar" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{ asset('img/core-img/arg.png') }}" class="pais" alt=""></a>
+                                            <a class="nav-link dropdown-toggle" href="{{ route('country','ar') }}" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{ asset('img/core-img/arg.png') }}" class="pais" alt=""></a>
 
                                             <div class="dropdown-menu" aria-labelledby="dropdown09">
-                                                <a class="dropdown-item" href="/locale?country=cr"><img src="{{ asset('img/core-img/cr.png') }}" class="pais" alt=""></a>
+                                                <a class="dropdown-item" href="{{ route('country','cr') }}"><img src="{{ asset('img/core-img/cr.png') }}" class="pais" alt=""></a>
                                             </div>
                                         @else
 
-                                            <a class="nav-link dropdown-toggle" href="/locale?country=cr" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{ asset('img/core-img/cr.png') }}" class="pais" alt=""></a>
+                                            <a class="nav-link dropdown-toggle" href="{{ route('country','cr') }}" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{ asset('img/core-img/cr.png') }}" class="pais" alt=""></a>
 
                                                 <div class="dropdown-menu" aria-labelledby="dropdown09">
-                                                    <a class="dropdown-item" href="/locale?country=ar"><img src="{{ asset('img/core-img/arg.png') }}" class="pais" alt=""></a>
+                                                    <a class="dropdown-item" href="{{ route('country','ar') }}"><img src="{{ asset('img/core-img/arg.png') }}" class="pais" alt=""></a>
                                                 </div>
                                         @endif
                                     </li>

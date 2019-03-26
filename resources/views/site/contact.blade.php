@@ -26,7 +26,7 @@
                 
                 <div class="col-md-5">
                     <!-- Heading Text  -->
-                    @if(session('country') == 'ar')
+                    @if(app('config')->get('app.country') == 'ar')
                     <div class="footer-heading">
                         <h2>Contacto</h2>
                     </div>
@@ -41,7 +41,7 @@
                         <p>+54-9-351-2017150</p>
                     </div>
                     @endif
-                    @if(session('country') == 'cr')
+                    @if(app('config')->get('app.country') == 'cr')
                     <div class="footer-heading">
                         <h2>Contacto</h2>
                     </div>

@@ -15,7 +15,7 @@ class Country
      */
     public function handle($request, Closure $next)
     {
-        if($country = session('country'))
+        if($country = $request->cookie('country'))
         {
             config(['app.country' => $country]);
     

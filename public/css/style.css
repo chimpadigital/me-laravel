@@ -1815,6 +1815,7 @@ button:focus {
     -webkit-box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
     box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
     background: white;
+    margin-bottom: 30px;
 }
 .blog-content{padding:34px;}
 .blog-content h5{color: #D3487B;}
