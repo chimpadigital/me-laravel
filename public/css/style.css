@@ -1838,7 +1838,7 @@ b, strong {font-weight: bold;}
 .active-nuevo {
     background: #d3497c;
     padding: 6px 9px;
-    color: white;
+    color: white!important;
     border-radius: 27px;
 }
 .active-nuevo-dos {
