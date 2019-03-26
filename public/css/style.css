@@ -178,7 +178,10 @@ ul,
 ol {
     margin: 0;
     padding: 0;
+    color: #726a84;
 }
+
+span{color: #726a84;}
 
 #scrollUp {
     bottom: 0;
