@@ -1823,6 +1823,31 @@ button:focus {
     background: white;
     margin-bottom: 30px;
 }
+
+/* Blog 2 */
+
+.blog-post2 .blog-image {
+float: left;
+margin-bottom:30px;
+padding-right: 20px;
+height: 100%;
+}
+
+.blog-post2 .blog-image img {
+height: 100%;
+}
+
+.blog-post2 .blog-content {
+padding: 34px;
+}
+.blog-post2 {
+-webkit-box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
+box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
+background: white;
+height: 300px;
+}
+
+
 .blog-content{padding:34px;}
 .blog-content h5{color: #D3487B;}
 .sidebar-blog{border-left:3px solid #ECBB3C;}

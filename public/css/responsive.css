@@ -235,6 +235,17 @@
         /* margin: auto; */
         /* position: absolute; */
     }
+
+    /* Blog 2 */
+    .blog-post2 {
+    height: auto;
+    }
+
+    .blog-post2 .blog-image{
+    margin-left: 0px;
+    margin-bottom: 20px
+    }
+
     .planeta {
         left: 12%;
         top: 4%;
