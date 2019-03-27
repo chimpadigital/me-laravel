@@ -45,7 +45,15 @@
                 
                 <div class="col-12 col-md-8">
                     <div class="row">
+                        @php
+                            $count = 0;
+                        @endphp
+
                         @forelse($posts as $post)
+                        @php
+                            $count++;
+                        @endphp
+                        @if($count < 3)
                         <div class="col-12 col-md-6">
                             <div class="blog-post wow fadeInUp" data-wow-delay="0.2s">
                                 <div class="blog-image">
@@ -58,6 +66,24 @@
                                 </div>
                             </div>
                         </div>
+                        @endif
+                        @if($count == 3)
+                            @php
+                                $count = 0;
+                            @endphp
+                            <div class="col-12" style="margin-bottom: 30px;">
+                                <div class="blog-post2 wow fadeInUp" data-wow-delay="0.2s">
+                                    <div class="blog-image">
+                                    <img src="{{ Storage::disk('public')->url($post->cover_image) }}" alt="">
+                                    </div>
+                                    <div class="blog-content">
+                                    <h5 class="mb-4">{{ $post->name }}</h5>
+                                    <p class="mb-5">{{ $post->summary }}</p>
+                                    <a href="{{ route('notes',$post->id) }}" class="btn-primary btn-sm">VER NOTA</a>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
                         @empty
 
                         @endforelse
