@@ -27,7 +27,7 @@
                         </li>
                     </ul>
                     
-                    <button class="btn-acordeon wow fadeInUp" data-wow-delay="1s" type="button" data-toggle="collapse" data-target="#desc" aria-expanded="false" aria-controls="collapseExample">
+                    <button class="btn-acordeon wow fadeInUp color-magenta" data-wow-delay="1s" type="button" data-toggle="collapse" data-target="#desc" aria-expanded="false" aria-controls="collapseExample">
                         Acerca del evento <img src="{{ asset('img/core-img/plus.svg') }}" class="float-right" alt="">
         
                         <div class="collapse" id="desc">
@@ -44,7 +44,7 @@
                         </div>
                     </button>
 
-                    <button class="btn-acordeon wow fadeInUp" data-wow-delay="1.2s" type="button" data-toggle="collapse" data-target="#temas" aria-expanded="false" aria-controls="collapseExample">
+                    <button class="btn-acordeon wow fadeInUp color-magenta" data-wow-delay="1.2s" type="button" data-toggle="collapse" data-target="#temas" aria-expanded="false" aria-controls="collapseExample">
                         Que vamos a aprender <img src="{{ asset('img/core-img/plus.svg') }}" class="float-right" alt="">
         
                         <div class="collapse" id="temas">

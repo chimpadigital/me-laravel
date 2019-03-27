@@ -178,7 +178,12 @@ ul,
 ol {
     margin: 0;
     padding: 0;
+    color: #4D4D4D;
 }
+.nav-item .nav-link span {
+    color: #ECBB3C;
+}
+span{color: #4D4D4D;font-size: 15px!important;}
 
 #scrollUp {
     bottom: 0;
@@ -207,7 +212,7 @@ li {
 }
 
 p {
-    color: #726a84;
+    color: #4D4D4D;
     font-size:15px;
     font-weight: 300;
     margin-top: 0;
@@ -1801,6 +1806,7 @@ button:focus {
     margin-left: auto!important;
 }
 .color-amarillo{color: #ECBB3C!important;}
+.color-magenta{color: #D3487B!important}
 .icono-evento{height: 30px;}
 .info-evento li {margin-bottom: 20px}
 .evento li {list-style: outside;margin-left: 15px!important;}
@@ -1857,7 +1863,7 @@ b, strong {font-weight: bold;}
 .active-nuevo {
     background: #d3497c;
     padding: 6px 9px;
-    color: white;
+    color: white!important;
     border-radius: 27px;
 }
 .active-nuevo-dos {
