@@ -41,7 +41,7 @@ class PageController extends Controller
 
     public function showEvents($id)
     {
-    	$event = Event::with('country')->where('id',$id)->country()->first();
+    	$event = Event::with('country')->where('id',$id)->first();
 
     	if (!$event) {
     		abort(404);
