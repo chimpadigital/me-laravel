@@ -31,6 +31,19 @@
                     <div class="mb-5 wow fadeInLeft" data-wow-delay="0.7s">
                         {!! $post->description !!}
                     </div>
+                    <div class="container">
+                        <div class="widget">
+                            <div class="fb-share-button" data-href="{{ route('notes',$post->id) }}" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="container">
+
+                        <div data-width="100%" class="fb-comments" data-href="{{ route('notes',$post->id) }}" data-numposts="5"></div>
+
+                    </div>
+
                 </div>
 
                 <!-- Single Special Area -->
@@ -74,7 +87,7 @@
     <!-- ***** Wellcome Area End ***** -->
     <section class="bg-white pb-5">
 
-        <div class="container">
+        <!-- <div class="container">
             <div class="widget">
                 <div class="fb-share-button" data-href="{{ route('notes',$post->id) }}" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
             </div>
@@ -85,7 +98,7 @@
 
             <div data-width="100%" class="fb-comments" data-href="{{ route('notes',$post->id) }}" data-numposts="5"></div>
 
-        </div>
+        </div> -->
         
 
     </section>
