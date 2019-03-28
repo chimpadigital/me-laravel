@@ -1871,7 +1871,7 @@ height: 300px;
 .blog-content{padding:34px;}
 .blog-content h5{color: #D3487B;}
 .sidebar-blog{border-left:3px solid #ECBB3C;}
-#posts{margin-top:-362px;z-index: 200;}
+#posts{margin-top:-362px;z-index: 200;background: #f7f7f7;}
 .widget{padding: 30px;}
 .widget h4{color: #D3487B;}
 .thumb-img{width: 80px;}

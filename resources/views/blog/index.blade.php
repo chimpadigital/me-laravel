@@ -37,7 +37,7 @@
     <!-- ***** Wellcome Area End ***** -->
 
     <!-- ***** Special Area Start ***** -->
-    <section class="section_padding_100 bg-white" id="posts">
+    <section class="section_padding_100" id="posts">
         <div class="container">
             
             <div class="row">
