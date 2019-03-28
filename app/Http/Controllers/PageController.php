@@ -18,6 +18,7 @@ use App\Mail\EmailContactForm;
 use App;
 
 
+
 class PageController extends Controller
 {
     public function locale(Request $request)
@@ -39,13 +40,21 @@ class PageController extends Controller
     	]);
     }
 
-    public function showEvents($id)
+    public function showEvents(Request $request,$id)
     {
-    	$event = Event::with('country')->where('id',$id)->country()->first();
+    	$event = Event::with('country')->where('id',$id)->first();
 
     	if (!$event) {
     		abort(404);
     	}
+
+    	if ($event->country->code != app('config')->get('app.country')) 
+    	{
+
+    		return redirect()->route('events.show.front',$event->id)->withCookie(cookie()->forever('country',$event->country->code));
+
+    	}
+    	
 
     	//dd($events);
 		

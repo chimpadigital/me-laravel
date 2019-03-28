@@ -38,7 +38,7 @@ class EventsController extends Controller
      */
     public function create()
     {
-		$countries = Country::all();
+		$countries = Country::whereNotIn('code',array('all_countries'))->get();
 		return view('events.create',[
             'countries'=>$countries,
         ]);
