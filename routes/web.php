@@ -85,7 +85,7 @@ Route::get('/servicios', function(){
 	return view('site.services');
 })->name('service');
 
-Route::get('/cursos', 'PageController@events')->name('events');
+Route::get('/cursos/{country_code?}', 'PageController@events')->name('events');
 
 Route::get('/cursos/show/{id}', 'PageController@showEvents')->name('events.show.front');
 
