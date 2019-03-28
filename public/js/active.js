@@ -25,7 +25,7 @@
         });
         $(".app_screenshots_slides").owlCarousel({
             items: 3,
-            loop: true,
+            loop: false,
             autoplay: true,
             smartSpeed: 800,
             margin: 30,
