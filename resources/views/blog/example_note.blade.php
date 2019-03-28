@@ -50,7 +50,7 @@
                 <div class="col-12 col-md-4 sidebar-blog bg-white">
                     <div class="widget">
                         <h4 class="mb-30">Últimas Noticias</h4>
-                        <ul>
+                        <ul class="latest-margin">
                             @include('blog.latest-news')
                         </ul>
                     </div>
