@@ -25,14 +25,14 @@
         });
         $(".app_screenshots_slides").owlCarousel({
             items: 3,
-            loop: false,
+            loop: true,
             autoplay: true,
             smartSpeed: 800,
             margin: 30,
             // center: true,
             dots: true,
             nav: true,
-            navText: ["<i class='pe-7s-angle-left'</i>", "<i class='pe-7s-angle-right'</i>"],
+            navText: ["<i class='fa fa-chevron-left'</i>", "<i class='fa fa-chevron-right'</i>"],
             responsive: {
                 0: {
                     items: 1,
