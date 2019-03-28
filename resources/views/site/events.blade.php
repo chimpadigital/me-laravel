@@ -75,7 +75,7 @@
             </div>
         </div>
         <!-- Welcome thumb -->
-        <div class="welcome-thumb wow fadeInDown" data-wow-delay="0.4s">
+        <div class="welcome-thumb">
             <img src="{{ asset('img/ilustraciones/fondo-circulo.svg') }}" alt="">
         </div>
     </section>
