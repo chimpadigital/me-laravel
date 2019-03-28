@@ -15,7 +15,7 @@
                 </div>
                 <!-- <div class="col-12 col-md-1"></div> -->
                 <div class="col-12 col-md-6 mt-5 mt-lg-0 wow fadeInDown" data-wow-delay="1s" style="z-index:1000;">
-                    <img src="img/ilustraciones/conferencia.svg" alt="">
+                    <img src="{{ asset('img/ilustraciones/conferencia.svg') }}" alt="">
                 </div>
             </div>
         </div>
@@ -76,7 +76,7 @@
         </div>
         <!-- Welcome thumb -->
         <div class="welcome-thumb wow fadeInDown" data-wow-delay="0.4s">
-            <img src="img/ilustraciones/fondo-circulo.svg" alt="">
+            <img src="{{ asset('img/ilustraciones/fondo-circulo.svg') }}" alt="">
         </div>
     </section>
     <!-- ***** Wellcome Area End ***** -->
