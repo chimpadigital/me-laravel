@@ -29,9 +29,35 @@ class PageController extends Controller
     	return redirect()->route('welcome');
     }
 
-    public function events()
+    public function events($country_code=null)
     {
-    	$events = App::call('App\Http\Controllers\EventsController@getNextEvents');
+    	//dd($country_code);
+
+		if (is_null($country_code)) {
+		
+			$country = Country::where('code',app('config')->get('app.country'))->get()->first();		
+			
+		}else{
+
+			$country = Country::where('code',$country_code)->get()->first();
+		}
+
+
+		if (!$country) {
+			return abort(404);
+		}
+
+		if ($country->code != app('config')->get('app.country')) 
+	    	{
+
+	    		return redirect()->route('events',$country->code)->withCookie(cookie()->forever('country',$country->code));
+
+	    	}
+
+
+		$actualDate = date(('Y-m-d'));
+
+		$events = Event::where('country_id', $country->id)->where('date_start', '>=', $actualDate)->get();
 
     	//dd($events);
 
