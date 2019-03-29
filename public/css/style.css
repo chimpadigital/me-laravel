@@ -183,7 +183,9 @@ ol {
 .nav-item .nav-link span {
     color: #ECBB3C;
 }
-span{color: #4D4D4D;font-size: 15px!important;}
+span{color: #4D4D4D;
+    /* font-size: 15px!important; */
+}
 
 #scrollUp {
     bottom: 0;
