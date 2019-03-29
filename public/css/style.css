@@ -210,7 +210,7 @@ a:active {
 li {
     list-style: none;
 }
-.blog li {
+.post li {
     list-style: outside;
     margin-left: 15px;
 }
