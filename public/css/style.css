@@ -210,10 +210,13 @@ a:active {
 li {
     list-style: none;
 }
+.blog li {
+    list-style: outside;
+}
 
 p {
     color: #4D4D4D;
-    font-size:15px;
+    font-size:15px!important;
     font-weight: 300;
     margin-top: 0;
 }

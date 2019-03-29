@@ -28,7 +28,7 @@
             <div class="row h-100">
                 
                 <div class="col-12 col-md-8  mt-5 mt-4 text-center text-lg-left">
-                    <div class="mb-5 wow fadeInLeft" data-wow-delay="0.7s">
+                    <div class="mb-5 wow fadeInLeft post" data-wow-delay="0.7s">
                         {!! $post->description !!}
                     </div>
                     <div class="container">
