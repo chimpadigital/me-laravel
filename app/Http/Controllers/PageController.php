@@ -21,12 +21,17 @@ use App;
 
 class PageController extends Controller
 {
-    public function locale(Request $request)
+    public function locale(Request $request,$code)
     {
-  
-    	session()->put('country',$request->input('country'));
+    	$country = Country::where('code',$code)->first();
+
+    	if ($country) {
+
+    		return back()->withCookie(cookie()->forever('country',$code));
+    	}
 
     	return redirect()->route('welcome');
+    	
     }
 
     public function events($country_code=null)
@@ -95,11 +100,19 @@ class PageController extends Controller
 
     public function EventsInscription($id)
     {
-    	$event = Event::with('country')->where('id',$id)->country()->first();
+    	$event = Event::with('country')->where('id',$id)->first();
+		
 		session()->put('eventId', $id);
 		
     	if (!$event) {
     		abort(404);
+    	}
+
+    	if ($event->country->code != app('config')->get('app.country')) 
+    	{
+
+    		return redirect()->refresh()->withCookie(cookie()->forever('country',$event->country->code));
+
     	}
 
     	//dd($events);
@@ -269,9 +282,16 @@ class PageController extends Controller
 
 	public function blogIndex(Request $request)
 	{
-		$request->validate([
-			'category'=>'exists:categories,id|nullable',
-		]);
+		if (!is_null($request->input('category'))) {
+			
+			$category = Category::where('id',$request->input('category'))->first();
+
+			if (!$category) {
+				return redirect()->route('blog');
+			}
+			
+		}
+			
 
 		$country = Country::where('code',app('config')->get('app.country'))->first();
 		
