@@ -23,12 +23,21 @@ class PageController extends Controller
 {
     public function locale(Request $request,$code)
     {
+
+
     	$country = Country::where('code',$code)->first();
 
     	if ($country) {
 
+    		if (\URL::previous() == route('/')."/" ) {
+	    		
+	    		return redirect()->route('welcome');
+	    	}
+
     		return back()->withCookie(cookie()->forever('country',$code));
     	}
+
+    	
 
     	return redirect()->route('welcome');
     	
