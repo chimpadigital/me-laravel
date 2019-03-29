@@ -169,6 +169,8 @@
 	    }
 	});
 
+	$('#summernote').summernote('removeFormat');
+
 	function uploadImage(image) {
 	    var data = new FormData();
 	    data.append("image", image);

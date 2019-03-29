@@ -43,7 +43,7 @@
                     <div class="menu_area">
                         <nav class="navbar navbar-expand-xl navbar-light">
                             <!-- Logo -->
-                            <a class="navbar-brand d-block d-xl-none" href="bienvenido.php">
+                            <a class="navbar-brand d-block d-xl-none" href="{{ route('welcome') }}">
                                 <img src="{{ asset('img/core-img/logo-menu.svg') }}" alt="">
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ca-navbar" aria-controls="ca-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
