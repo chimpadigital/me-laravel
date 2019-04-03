@@ -29,7 +29,7 @@
 <!-- Simple list -->
 <div class="card">
 	<div class="card-header header-elements-inline">
-		<h5 class="card-title">Cursos existentes</h5>
+		<h5 class="card-title">Categorias existentes</h5>
 		<div class="pull-right">
 			<div class="header-elements d-none">
 				<a href="{{ route('admin.category.create') }}" class="btn btn-labeled btn-labeled-right bg-pink-400">Nuevo <b><i class="icon-add"></i></b></a>

@@ -11,7 +11,7 @@
         @forelse($categories as $category)
 			<li>
 	            <a href="{{ route('blog') }}?category={{ $category->id }}">
-	                <p>{{ $category->name }}</p>
+	                <p id="category-{{ $category->id }}">{{ $category->name }}</p>
 	            </a>
 	        </li>
         @empty
@@ -20,3 +20,13 @@
         
     </ul>
 </div> 
+
+@section('section-scripts')
+<script type="text/javascript">
+    
+    @if(Request::input('category'))
+     $('#category-{{ Request::input('category') }}').addClass('active-nuevo');
+    @endif
+
+</script>
+@endsection
