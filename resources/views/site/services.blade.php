@@ -35,7 +35,7 @@
                             <div class="single-icon">
                                 <img src="{{ asset('img/core-img/cursos.svg') }}" alt="">
                             </div>
-                            <h4  class="mb-30">Cursos de Formación</h4>
+                            <h4  class="mb-30">Cursos de<br>Formación</h4>
                             <a href="#cursos" class="btn-primary btn-yellow">INFORMAME</a>
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                             <div class="single-icon">
                                 <img src="{{ asset('img/core-img/charlas.svg') }}" alt="">
                             </div>
-                            <h4  class="mb-30">Charlas y Conferencias</h4>
+                            <h4  class="mb-30">Charlas y<br>Conferencias</h4>
                             <a href="#charlas" class="btn-primary btn-yellow">INFORMAME</a>
                             
                         </div>

@@ -184,7 +184,7 @@ ol {
     color: #ECBB3C;
 }
 span{color: #4D4D4D;
-    font-size: 15px!important;
+    /* font-size: 15px!important; */
 }
 
 #scrollUp {
@@ -1891,6 +1891,7 @@ b, strong {font-weight: bold;}
     padding: 6px 9px;
     color: white!important;
     border-radius: 27px;
+    width: fit-content;
 }
 .active-nuevo-dos {
     background:white;
@@ -1919,3 +1920,10 @@ b, strong {font-weight: bold;}
 }
 .contacto-h100{height: 100vh;}
 .latest-margin li{margin-bottom: 50px;}
+.etiqueta{
+    background: #e2e2e2;
+    padding: 6px 9px;
+    color: #824a97!important;
+    border-radius: 27px;
+    width: fit-content;
+}

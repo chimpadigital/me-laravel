@@ -105,48 +105,15 @@
                     </div>
 
                     @include('blog.categories')
-<!-- 
-                    <div class="widget">
-                        <h4 class="mb-30">Archivo</h4>
-                        <ul>
-                            <li>
-                                <a href="">
-                                    <p>12/2018</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <p>11/2018</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <p>10/2018</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </div> -->
 
+<!-- ----------------------------WIDGET ETIQUETAS-------------------------------- -->
                     <!-- <div class="widget">
-                        <h4 class="mb-30">Categorías</h4>
-                        <ul>
-                            <li>
-                                <a href="">
-                                    <p>Charlas</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <p>Innovación</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <p>Capacitaciones</p>
-                                </a>
-                            </li>
-                        </ul>
+                        <h4 class="mb-30">Archivo</h4>
+                        <div class="mt-4">
+                            <p class="etiqueta float-left mr-2 mb-2">Etiqueta 1</p>
+                        </div>
                     </div> -->
+<!-- ----------------------------WIDGET ETIQUETAS-------------------------------- -->
 
                 </div>
                 
