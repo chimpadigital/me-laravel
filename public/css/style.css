@@ -208,6 +208,7 @@ a:active {
     -webkit-transition-duration: 500ms;
     -o-transition-duration: 500ms;
     transition-duration: 500ms;
+    font-size: inherit!important;
 }
 
 li {
