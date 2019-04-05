@@ -57,6 +57,8 @@
                     
                     @include('blog.categories')
 
+                    @include('blog.tags')
+
 <!-- 
                     <div class="widget">
                         <h4 class="mb-30">Archivo</h4>

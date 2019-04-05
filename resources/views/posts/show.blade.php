@@ -44,8 +44,10 @@
 								</div>
 
 								{!! $post->description !!}
-		
+								
+								@include('blog.tags')
 							</div>
+							
 						</div>
 						<!-- /post -->
 

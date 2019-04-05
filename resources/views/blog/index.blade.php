@@ -106,15 +106,6 @@
 
                     @include('blog.categories')
 
-<!-- ----------------------------WIDGET ETIQUETAS-------------------------------- -->
-                    <!-- <div class="widget">
-                        <h4 class="mb-30">Etiquetas</h4>
-                        <div class="mt-4">
-                            <p class="etiqueta float-left mr-2 mb-2">Etiqueta 1</p>
-                        </div>
-                    </div> -->
-<!-- ----------------------------WIDGET ETIQUETAS-------------------------------- -->
-
                 </div>
                 
             </div>

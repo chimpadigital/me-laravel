@@ -325,6 +325,8 @@ class PageController extends Controller
 		{
 			return about(404);
 		}
+
+		$tags = explode(',', $post->tags);
 		
 		return view('blog.example_note',[
 			'post'=>$post,

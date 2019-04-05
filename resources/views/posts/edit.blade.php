@@ -145,6 +145,15 @@
 				
 				</div>
 
+				<div class="form-group">
+					
+					<label for="">Etiquetas</label>
+					<p class="text-muted">Ingresar etiquetas separadas por comas (,)</p>
+
+					<input type="text" name="tags" class="form-control" required value="{{ $post ? $post->tags : old('tags') }}">
+
+				</div>
+
 				<button type="submit" class="btn btn-success">Guardar</button>
 			</form>
 		</div>
