@@ -50,7 +50,6 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-
         $request->validate([
             'name'=>'required|string',
             'description'=>'required|string',
@@ -58,6 +57,7 @@ class PostController extends Controller
             'img'=>'required|file',
             'category'=>'required|numeric|exists:categories,id',
             'country'=>'numeric|exists:countries,id',
+            'tags'=>'required|regex:~^([a-z0-9]+,)+$~i',
         ]);
 
         $country_post = $request->input('country');
@@ -77,6 +77,7 @@ class PostController extends Controller
             'cover_image'=>$request->file('img')->store('cover_img_post','public'),
             'category_id'=>$request->input('category'),
             'country_id'=>$country_post,
+            'tags'=>$request->input('tags'),
         ]);
 
         return redirect()->route('admin.post.index')->with('success','Post creado con Exito');
@@ -144,6 +145,7 @@ class PostController extends Controller
             'img'=>'file',
             'category'=>'required|numeric|exists:categories,id',
             'country'=>'required|numeric|exists:countries,id',
+            'tags'=>'required|regex:~^([a-z0-9]+,)+$~i',
         ]);
 
         $country_post = $request->input('country');
@@ -171,6 +173,7 @@ class PostController extends Controller
 
         $post->update([
             'name'=>$request->input('name'),
+            'tags'=>$request->input('tags'),
             'description'=>$request->input('description'),
             'summary'=>$request->input('summary'),
             'cover_image'=>$this->cover_image,
