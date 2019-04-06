@@ -68,10 +68,18 @@
                 <div class="col-12 col-md-1"></div>
                 <div class="col-12 col-md-5 wow fadeInDown" data-wow-delay="1s" style="z-index:1000;">
                     <div class="precio">
+                        @if(date(('Y-m-d')) <= $event->date_start )
                         <h3 class="">Costo</h3>
                         <h1 class="mb-4"> @if(app('config')->get('app.country')=='ar')$ @endif {{ $event->price }} @if(app('config')->get('app.country')=='cr') USD @endif</h1>
+
                         
                         <a href="{{ route('events.inscription.front',$event->id) }}" class="btn btn-primary mt-5">Inscribirse</a>
+
+                        @else
+                            <h3 class="">Evento terminado</h3>
+
+                            <a href="{{ route('events') }}" class="btn btn-primary mt-5">Próximos cursos</a>
+                        @endif
 
                         <!-- <h6 class="mt-3"><b>*Información importante !! La inscripción finaliza cuando realizas el pago total del curso por medio de transferencia bancaria.</b> </h6> -->
                         <!-- <p>Datos para realizar la transferencia:</p>
