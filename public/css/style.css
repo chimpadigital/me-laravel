@@ -1628,6 +1628,7 @@ border-radius: 30px;
 .btn-pais:hover {
     color: #ffffff;
     background: #45A8BC;
+    font-size: 27px!important;
 }
 
 .btn-pais-2:hover {
