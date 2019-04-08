@@ -243,3 +243,9 @@
     </section>
     <!-- ***** Contact Us Area End ***** -->    
 @endsection
+
+@section('section-scripts')
+<script type="text/javascript">
+    $('#events').addClass('active-nuevo-dos');
+</script>
+@endsection

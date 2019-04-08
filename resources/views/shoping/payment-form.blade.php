@@ -232,7 +232,7 @@
 	    }
 	};
     
-    $('#events').addClass('active-nuevo');
+    
 
 </script>
 

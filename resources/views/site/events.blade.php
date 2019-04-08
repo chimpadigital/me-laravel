@@ -85,6 +85,6 @@
 @endsection
 @section('section-scripts')
 <script type="text/javascript">
-    $('#events').addClass('active-nuevo');
+    $('#events').addClass('active-nuevo-dos');
 </script>
 @endsection
