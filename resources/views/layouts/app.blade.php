@@ -128,14 +128,14 @@
 		<div class="navbar-collapse collapse" id="navbar-navigation">
 			<ul class="navbar-nav navbar-nav-highlight">
 				<li class="nav-item">
-					<a href="#" class="navbar-nav-link active legitRipple">
+					<a id="home" href="{{ route('home') }}" class="navbar-nav-link legitRipple">
 						<i class="icon-home4 mr-2"></i>
 						Inicio
 					</a>
 				</li>
 				
 				<li class="nav-item dropdown">
-					<a href="#" class="navbar-nav-link dropdown-toggle legitRipple" data-toggle="dropdown">
+					<a id="events" href="#" class="navbar-nav-link dropdown-toggle legitRipple" data-toggle="dropdown">
 						<i class="icon-users mr-2"></i>
 						Cursos 
 					</a>
@@ -150,7 +150,7 @@
 				</li>
 
 				<li class="nav-item dropdown">
-					<a href="#" class="navbar-nav-link dropdown-toggle legitRipple" data-toggle="dropdown">
+					<a id="blog-menu" href="#" class="navbar-nav-link dropdown-toggle legitRipple" data-toggle="dropdown">
 						<i class="icon-blogger mr-2"></i>
 						Blog 
 					</a>
@@ -165,7 +165,7 @@
 				</li>
 
 				<li class="nav-item dropdown">
-					<a href="#" class="navbar-nav-link dropdown-toggle legitRipple" data-toggle="dropdown">
+					<a id="categories-menu" href="#" class="navbar-nav-link dropdown-toggle legitRipple" data-toggle="dropdown">
 						<i class="icon-list mr-2"></i>
 						Categorias 
 					</a>

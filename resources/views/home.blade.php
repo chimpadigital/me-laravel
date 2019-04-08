@@ -21,3 +21,8 @@
     </div>
 </div>
 @endsection
+@section('scripts')
+<script type="text/javascript">
+    $('#home').addClass('active');
+</script>
+@endsection

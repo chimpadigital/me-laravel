@@ -72,11 +72,17 @@ class PageController extends Controller
 		$actualDate = date(('Y-m-d'));
 
 		$events = Event::where('country_id', $country->id)->where('date_start', '>=', $actualDate)->get();
+	
+		$pastEvents = Event::where('country_id', $country->id)->where('date_start', '<', $actualDate)->paginate(6);
 
-    	//dd($events);
+		$eventsOther = Event::whereNotIn('country_id', array($country->id))->where('date_start', '>=', $actualDate)->get();
+
+    	//dd($eventsOther);
 
     	return view('site.events',[
     		'events'=>$events,
+    		'pastEvents'=>$pastEvents,
+    		'eventsOther'=>$eventsOther,
     	]);
     }
 

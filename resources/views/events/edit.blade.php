@@ -182,5 +182,7 @@
 
 	$('#country_id').val('{{ $event->country_id }}');
 	
+    $('#events').addClass('active');
+
 </script>
 @endsection

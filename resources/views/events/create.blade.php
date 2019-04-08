@@ -178,5 +178,8 @@
 			
 	});
 	
+
+$('#events').addClass('active');
+
 </script>
 @endsection

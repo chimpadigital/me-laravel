@@ -200,5 +200,9 @@
 }
 
 
+$('#blog-menu').addClass('active');
+
+
+
 </script>
 @endsection
