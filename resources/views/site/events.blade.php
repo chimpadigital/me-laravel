@@ -80,7 +80,128 @@
         </div>
     </section>
     <!-- ***** Wellcome Area End ***** -->
- 
+
+
+    <section class="bg-white">
+        
+        <div class="cursos wow fadeInUp" data-wow-delay="0.3s" style="padding-top: 30px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <!-- Section Heading Area -->
+                        <div class="section-heading text-center" id="eventos">
+                            <h2 class="color-amarillo">Eventos pasados</h2>
+                            <!-- <div class="line-shape"></div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    @forelse($pastEvents as $event)
+                        
+                        <div class="single-team-member col-md-4">
+                            
+                            <div class="charlas-image">
+                                
+                            <img src="{{asset('storage/'.$event->img)}}" alt="">
+                            
+                                <div class="charlas-hover-effects">
+                                    
+                                        <div class="charlas-social-icon">
+                                            <a href="{{ route('events.show.front',$event->id) }}">
+                                                <h5>{{ $event->name }}</h5>
+                                                <ul class="d-inline-flex charla-info">
+                                                    <li>
+                                                        <i class="fa fa-calendar"></i> {{ date('d',strtotime($event->date_start)) }} / {{ date('m',strtotime($event->date_start)) }}
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-clock-o"></i> {{ $event->hour }}
+                                                    </li>
+                                                </ul>
+                                                <a href="{{ route('events.show.front',$event->id) }}" class="charlas-mas">
+                                                    <i class="fa fa-plus"></i>
+                                                </a>
+                                            </a>
+                                        </div>
+                                    
+                                </div>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+
+                    @empty
+
+                    @endforelse
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        <div style="display: flex; justify-content: center;">
+            
+            {{$pastEvents->links()}}
+            
+        </div>
+    </section>
+    
+    <section>
+        <div class="bg-white cursos wow fadeInUp" data-wow-delay="0.3s" style="padding-top: 60px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <!-- Section Heading Area -->
+                        <div class="section-heading text-center" id="eventos">
+                            <h2 class="color-amarillo">Eventos en otros paises</h2>
+                            <!-- <div class="line-shape"></div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="app_screenshots_slides owl-carousel">
+                        @forelse($eventsOther as $event)
+                            <div class="single-shot">
+                                <div class="single-team-member">
+                                    <div class="charlas-image">
+                                        
+                                            <img src="{{asset('storage/'.$event->img)}}" alt="">
+                                            
+                                                <div class="charlas-hover-effects">
+                                                    
+                                                        <div class="charlas-social-icon">
+                                                            <a href="{{ route('events.show.front',$event->id) }}">
+                                                                <h5>{{ $event->name }}</h5>
+                                                                <ul class="d-inline-flex charla-info">
+                                                                    <li>
+                                                                        <i class="fa fa-calendar"></i> {{ date('d',strtotime($event->date_start)) }} / {{ date('m',strtotime($event->date_start)) }}
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="fa fa-clock-o"></i> {{ $event->hour }}
+                                                                    </li>
+                                                                </ul>
+                                                                <a href="{{ route('events.show.front',$event->id) }}" class="charlas-mas">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </a>
+                                                            </a>
+                                                        </div>
+                                                    
+                                                </div>
+                                            
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                        @empty
+                        @endforelse
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </section>
 
 @endsection
 @section('section-scripts')

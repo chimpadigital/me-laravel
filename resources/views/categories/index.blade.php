@@ -78,8 +78,20 @@
 			</tbody>
 		</table>
 
+		<!-- Pagination -->
+		<div class="d-flex justify-content-center mt-3 mb-3">
+			{{ $categories->links() }}
+		</div>
+		<!-- /pagination -->
+
 		
 	</div>
 </div>
 <!-- /simple list -->
+@endsection
+
+@section('scripts')
+<script type="text/javascript">
+    $('#categories-menu').addClass('active');
+</script>
 @endsection

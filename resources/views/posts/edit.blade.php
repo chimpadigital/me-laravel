@@ -206,5 +206,8 @@
 $('#category').val({{ $post ? $post->category_id : old('category') }});
 $('#country').val({{ $post ? $post->country_id : old('country') }});
 
+
+$('#blog-menu').addClass('active');
+
 </script>
 @endsection

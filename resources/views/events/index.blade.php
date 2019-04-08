@@ -84,8 +84,20 @@
 			</tbody>
 		</table>
 
+		<!-- Pagination -->
+		<div class="d-flex justify-content-center mt-3 mb-3">
+			{{ $events->links() }}
+		</div>
+		<!-- /pagination -->
+
 		
 	</div>
 </div>
 <!-- /simple list -->
+@endsection
+
+@section('scripts')
+<script type="text/javascript">
+    $('#events').addClass('active');
+</script>
 @endsection

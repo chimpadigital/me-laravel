@@ -78,3 +78,8 @@
 	<!-- /pagination -->
 
 @endsection
+@section('scripts')
+<script type="text/javascript">
+    $('#blog-menu').addClass('active');
+</script>
+@endsection
