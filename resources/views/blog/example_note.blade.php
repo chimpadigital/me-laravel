@@ -111,7 +111,3 @@
     </section>
 
 @endsection
-
-@section('section-scripts')
-
-@endsection

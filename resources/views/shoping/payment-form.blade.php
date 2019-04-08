@@ -231,6 +231,9 @@
         	form.submit();
 	    }
 	};
+    
+    $('#events').addClass('active-nuevo');
+
 </script>
 
 @endsection

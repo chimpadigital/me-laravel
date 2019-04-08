@@ -300,6 +300,10 @@ class PageController extends Controller
 			}
 			
 		}
+		else
+		{
+			$category = null;
+		}
 			
 
 		$country = Country::where('code',app('config')->get('app.country'))->first();
@@ -314,6 +318,7 @@ class PageController extends Controller
 		//dd($posts);
 		return view('blog.index',[
 			'posts'=>$posts,
+			'category'=>$category,
 		]);
 	}
 

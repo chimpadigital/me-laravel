@@ -103,3 +103,9 @@
 
     @include('layouts.contact')
 @endsection
+
+@section('section-scripts')
+<script type="text/javascript">
+    $('#events').addClass('active-nuevo');
+</script>
+@endsection
