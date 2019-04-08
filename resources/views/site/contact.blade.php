@@ -372,6 +372,6 @@
 @endsection
 @section('section-scripts')
 <script type="text/javascript">
-    $('#contact').addClass('active-nuevo');
+    $('#contact').addClass('active-nuevo-dos');
 </script>
 @endsection

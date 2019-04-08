@@ -56,7 +56,7 @@
                                     <li class="nav-item"><a class="nav-link" href="{{ route('welcome') }}"><span id="bienvenido" class="">Bienvenido</span></a></li>
                                     <li class="nav-item"><a class="nav-link" href="{{ route('about') }}"><span id="about" class="">¿Quiénes Somos?</span></a></li>
                                     <li class="nav-item"><a class="nav-link" href="{{ route('service') }}"><span id="service" class="">¿Qué hacemos?</span></a></li>
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('blog') }}"><span id="blog" class="">Blog</span></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('blog') }}"><span id="blog-navbar" class="">Blog</span></a></li>
                                     
                                 </ul>
                                 <a class="navbar-brand d-none d-xl-block" href="{{ route('welcome') }}">

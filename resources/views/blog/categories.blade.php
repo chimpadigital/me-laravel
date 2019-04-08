@@ -28,5 +28,9 @@
      $('#category-{{ Request::input('category') }}').addClass('active-nuevo');
     @endif
 
+
+    $('#blog-navbar').addClass('active-nuevo');
+</script>
+
 </script>
 @endsection
