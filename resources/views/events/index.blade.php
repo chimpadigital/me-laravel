@@ -84,6 +84,12 @@
 			</tbody>
 		</table>
 
+		<!-- Pagination -->
+		<div class="d-flex justify-content-center mt-3 mb-3">
+			{{ $events->links() }}
+		</div>
+		<!-- /pagination -->
+
 		
 	</div>
 </div>

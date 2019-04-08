@@ -15,7 +15,7 @@ class EventsController extends Controller
      */
     public function index()
     {
-        $events = Event::with('country')->paginate(50);
+        $events = Event::with('country')->paginate(25);
 
         return view('events.index',[
             'events'=>$events,
