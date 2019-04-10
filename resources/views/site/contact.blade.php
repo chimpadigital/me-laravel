@@ -345,7 +345,7 @@
                                     <!-- Single Input Area Start -->
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Consulta" required></textarea>
+                                            <textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Consulta" required></textarea>
                                         </div>
                                     </div>
                                     <!-- Single Input Area Start -->
