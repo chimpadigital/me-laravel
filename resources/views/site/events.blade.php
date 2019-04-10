@@ -84,7 +84,7 @@
 
     <section class="bg-white">
         
-        <div class="cursos wow fadeInUp" data-wow-delay="0.3s" style="padding-top: 30px;">
+        <div class="cursos " style="padding-top: 30px;">
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
@@ -147,7 +147,7 @@
     </section>
     
     <section>
-        <div class="bg-white cursos wow fadeInUp" data-wow-delay="0.3s" style="padding-top: 60px;">
+        <div class="bg-white cursos" style="padding-top: 60px;">
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">

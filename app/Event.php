@@ -16,11 +16,12 @@ class Event extends Model
     	return $this->belongsTo(Country::class);
     }
 
-    public function scopeCountry($query)
+    public function scopeCountryFilter($query,$id)
     {
   
-    	$country = Country::where('code',app('config')->get('app.country'))->first();
-    	if ($country) 
+    	$country = Country::where('id',$id)->first();
+    	
+        if ($country && $country->code != 'all_countries') 
         {
             return $query->where('country_id',$country->id);
         }

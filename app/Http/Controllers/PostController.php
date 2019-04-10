@@ -16,12 +16,15 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $posts = Post::with('category')->paginate(25);
+        $posts = Post::with('category')->countryFilter($request->country)->paginate(25);
+
+        $countries = Country::all();
         
         return view('posts.index',[
             'posts'=>$posts,
+            'countries'=>$countries,
         ]);
     }
 
