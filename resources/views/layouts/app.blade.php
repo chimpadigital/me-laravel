@@ -89,7 +89,7 @@
 					<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
 						<img src="
 						@if(is_null($userAuth->avatar))
-							https://www.w3schools.com/w3images/avatar2.png
+						{{ asset('/img/core-img/logo.svg') }}
 						@else
 							{{Storage::disk('public')->url($userAuth->avatar)}}
 						@endif
