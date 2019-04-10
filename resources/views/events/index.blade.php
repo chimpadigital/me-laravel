@@ -9,7 +9,6 @@
 
 
 
-
 @if (session('error'))
 
 		<div class="alert alert-warning alert-styled-left alert-dismissible">
@@ -36,6 +35,34 @@
 			</div>
 		</div>
 	</div>
+	<div class="card-header header-elements-inline">
+		<h5></h5>
+		<div class="pull-right">
+			<form class="form-inline">
+								
+				<div class="form-group">
+					
+					<label class="mr-2" for="">Pais:</label>
+					
+					<select class="form-control mr-2" name="country" id="filter-country">
+					
+						@foreach($countries as $country)
+
+							<option value="{{ $country->id }}">{{ $country->name }}</option>
+						
+						@endforeach
+					
+					</select>
+				
+				</div>
+				
+					<button class="btn btn-primary" type="submit">Filtrar</button>
+				
+			</form>
+		</div>
+	
+	</div>
+	
 
 	<div class="card-body">
 
@@ -99,5 +126,7 @@
 @section('scripts')
 <script type="text/javascript">
     $('#events').addClass('active');
+
+    $('#filter-country').val('{{ Request::input('country') ? Request::input('country') : 1  }}');
 </script>
 @endsection

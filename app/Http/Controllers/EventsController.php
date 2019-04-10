@@ -13,12 +13,14 @@ class EventsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $events = Event::with('country')->paginate(25);
+        $events = Event::with('country')->countryFilter($request->input('country'))->paginate(25);
+        $countries = Country::all();
 
         return view('events.index',[
             'events'=>$events,
+            'countries'=>$countries,
         ]);
     }
 	
