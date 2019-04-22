@@ -57,7 +57,7 @@
                                     <!-- Single Input Area Start -->
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="¿Dudas?" required></textarea>
+                                            <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="¿Qué te gustaría aprender en éste curso?" required></textarea>
                                         </div>
                                     </div>
 
