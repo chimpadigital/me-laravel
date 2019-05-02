@@ -8,7 +8,7 @@
             <div class="row h-100">
                 <div class="col-12 col-md-6">
                     <div class="wellcome-heading wow fadeInLeft" data-wow-delay="0.7s">
-                        <h5>Cursos impulso 2019</h5>
+                        <!-- <h5>Cursos impulso 2019</h5> -->
                         <h2>{{ $event->name }}</h2>
                         <p class="text-dark">{{ $event->description }}</p>
                     </div>
