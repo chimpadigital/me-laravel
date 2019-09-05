@@ -184,7 +184,9 @@ ol {
 .nav-item .nav-link span {
     color: #ECBB3C;
 }
-span{color: #4D4D4D;
+span{
+    /*color: #4D4D4D;*/
+    color:inherit;
     font-size: inherit!important;
 }
 
