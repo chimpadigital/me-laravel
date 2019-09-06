@@ -16,7 +16,7 @@ Route::get('/', function () {
     return view('index');
 })->name('/');
 
-Route::get('/bienvenido', function () {
+Route::get('/bienvenido/{country_code?}', function () {
 	$events = App::call('App\Http\Controllers\EventsController@getNextEvents');
     return view('welcome')->with('events', $events);
 })->name('welcome');
@@ -34,7 +34,7 @@ Route::post('/register', function () {
 })->name('register');
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home/{country_code?}', 'HomeController@index')->name('home');
 
 Route::group(['middleware'=>['auth']],function(){
 
@@ -70,34 +70,34 @@ Route::group(['middleware'=>['auth']],function(){
 
 });
 
-Route::get('/blog', 'PageController@blogIndex' )->name('blog');
+Route::get('/blog/{country_code?}', 'PageController@blogIndex' )->name('blog');
 
-Route::get('blog/notes/{id}', 'PageController@blogShow')->name('notes');
+Route::get('blog/notes/{id}/{country_code?}', 'PageController@blogShow')->name('notes');
 
-Route::get('/nosotras', function(){
+Route::get('/nosotras/{country_code?}', function(){
 	return view('site.about');
 })->name('about');
 
-Route::get('/servicios', function(){
+Route::get('/servicios/{country_code?}', function(){
 	return view('site.services');
 })->name('service');
 
 Route::get('/cursos/{country_code?}', 'PageController@events')->name('events');
 
-Route::get('/cursos/show/{id}', 'PageController@showEvents')->name('events.show.front');
+Route::get('/cursos/show/{id}/{country_code?}', 'PageController@showEvents')->name('events.show.front');
 
-Route::get('/cursos/inscripcion/{id}', 'PageController@EventsInscription')->name('events.inscription.front');
+Route::get('/cursos/inscripcion/{id}/{country_code?}', 'PageController@EventsInscription')->name('events.inscription.front');
 
 Route::resource('inscripcion','InscriptionController')->names([
 	'store'=>'store.inscription',
 ])->only('store');
 
 
-Route::get('/cursos/payments','PaymentController@show')->name('events.payments');
+Route::get('/cursos/payments/{country_code?}','PaymentController@show')->name('events.payments');
 
-Route::post('/cursos/payments', 'PageController@payment')->name('events.payments.set');
+Route::post('/cursos/payments/{country_code?}', 'PageController@payment')->name('events.payments.set');
 
-Route::post('/cursos/sendEmail', 'PageController@sendEmail')->name('send.email.contact');
+Route::post('/cursos/sendEmail/{country_code?}', 'PageController@sendEmail')->name('send.email.contact');
 
 
 /*MercadoPago redirects*/
@@ -106,6 +106,6 @@ Route::get('/pending', 'PageController@pending');
 Route::get('/failure', 'PageController@failure');
 /*----*/
 
-Route::get('/contact', function(){
+Route::get('/contact/{country_code?}', function(){
 	return view('site.contact');
 })->name('contact');

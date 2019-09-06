@@ -29,17 +29,21 @@ class PageController extends Controller
 
     	if ($country) {
 
-    		if (\URL::previous() == route('/')."/" ) {
-	    		
-	    		return redirect()->route('welcome');
-	    	}
+    		//if (\URL::previous() == route('/')."/" ) {
+	    	//	
+	    	//	return redirect()->route('welcome');
+	    	//}
 
-    		return back()->withCookie(cookie()->forever('country',$code));
-    	}
+    		//return back()->withCookie(cookie()->forever('country',$code));
+			session()->put('country_code', $code);
+			config(['app.country' => session()->get('country_code')]);
+    	}else{
+			$code = 'ar';
+		}
 
     	
 
-    	return redirect()->route('welcome');
+    	return redirect('./bienvenido/'.$code);
     	
     }
 
