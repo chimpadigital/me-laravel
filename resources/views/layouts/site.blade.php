@@ -43,6 +43,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   gtag('config', 'UA-65052779-1');
 </script>
 
+<!-- Global site tag (gtag.js) - Google Ads: 946055636 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-946055636"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-946055636'); </script>
+
 </head>
 
 <body>

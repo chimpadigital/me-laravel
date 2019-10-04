@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+<!-- Event snippet for Seguimiento Campaña Servicios conversion page --> <script> gtag('event', 'conversion', {'send_to': 'AW-946055636/3Q4GCJX9na0BENTTjsMD'}); </script>
     <!-- ***** Wellcome Area Start ***** -->
     <section class="wellcome_area clearfix bg-white position-relative" id="home">
         <div class="container h-100 mt-8 mb-4">
